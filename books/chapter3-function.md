@@ -98,17 +98,9 @@ InputStream fileOpen(”MyFile”)은 String 형의 파일 이름을 InputStream
 
 ## ****새롭게 배운 개념****
 
-<aside>
 ❓ 다형성이란?  
 하나의 객체 혹은 메소드가 여러 타입을 참조할 수 있음을 의미한다.
 
-</aside>
-
-
-
-<aside>
 ❓ 새로 알게 된 JAVA의 형식  
 함수 StringBuffer transform(StringBuffer in)에 대해서,  
 StringBuffer는 출력을, (StringBuffer in)은 입력을 의미한다.
-
-</aside>
