@@ -23,5 +23,5 @@ A>B
 ## attribute selector
 
 
-[CSS Diner](https://flukeout.github.io/)
+[CSS Diner](https://flukeout.github.io/)  
 [생활코딩-여러가지 선택자들](https://opentutorials.org/module/2367/13583)
