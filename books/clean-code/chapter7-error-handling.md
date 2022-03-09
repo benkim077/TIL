@@ -33,5 +33,3 @@
 try에서 예외가 발생하는 경우 catch가 실행된다. finally는 예외 발생 여부와 관계 없이 실행.
 
 [try...catch - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/try...catch)
-
-
