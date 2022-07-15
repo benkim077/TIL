@@ -1,5 +1,7 @@
 # git
 
-[git_basic](https://github.com/benkim077/TIL/tree/master/git/git_basic)
+# Index
 
-[command](https://github.com/benkim077/TIL/tree/master/git/command)
+- [git_basic](https://github.com/benkim077/TIL/tree/master/git/git_basic)
+
+- [command](https://github.com/benkim077/TIL/tree/master/git/command)
