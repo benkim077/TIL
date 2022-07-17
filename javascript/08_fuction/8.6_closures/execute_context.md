@@ -8,7 +8,9 @@
 ## Scope
 
 JS는 변수를 읽을 때, scope에서 찾는다. 
+
 scope에는 local, script, global scope가 있다.
+
 local > script > global 순서로 탐색한다. 셋의 연결을 scope chain이라 한다. global은 항상 접근 가능하다.
 
 ```js
