@@ -11,11 +11,11 @@
 
 ## Dynamic Scope and Static Scope
 
-어디에서 **호출**했느냐에 따라, 접근할 수 있는 유효범위가 달라진다는 것을 **dynamic scope**라 한다. 
+함수 **호출 위치**에 따라 접근할 수 있는 유효범위(scope)가 달라지는 것을 **dynamic scope**라고 한다. 
 
-반면에 함수의 **선언** 위치에 따라, scope가 달라지는 것을 **static scope**(**lexical scope**)라 한다.
+반면에 함수의 **선언 위치**에 따라, scope가 달라지는 것을 **static scope**(**lexical scope**)라 한다.
 
-**JS의 scope는 static scope**를 따른다.
+**JavaSciprt는 static scope**를 따른다.
 
 ## Nested function and Closure
 
