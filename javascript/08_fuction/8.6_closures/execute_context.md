@@ -1,8 +1,9 @@
 # Excute Context
 > **목적**
-실행 컨텍스트, 콜스택, 스코프에 대해 이해한다.
-웹 브라우저 개발자 도구를 이용해서, 실행 컨텍스트에 따라 변수가 어떤 scope에 저장되는지 살펴본다.
-(source > debugger > scope, call stack)
+> 
+> 실행 컨텍스트, 콜스택, 스코프에 대해 이해한다.
+> 웹 브라우저 개발자 도구를 이용해서, 실행 컨텍스트에 따라 변수가 어떤 scope에 저장되는지 살펴본다.
+> (source > debugger > scope, call stack)
 
 ## Scope
 

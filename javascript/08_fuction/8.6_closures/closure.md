@@ -1,11 +1,13 @@
 # Closure
 > **배경**
-Local scope에서 global scope에 접근하는 것은 가능하다.
-그러나 중첩된 함수에서 둘러싼 함수에 접근하는 것은 불가능하다.
-그것을 가능하게 만드는 것이 클로저이다.
+>
+> Local scope에서 global scope에 접근하는 것은 가능하다.
+> 그러나 중첩된 함수에서 둘러싼 함수에 접근하는 것은 불가능하다.
+> 그것을 가능하게 만드는 것이 클로저이다.
 
 > **목적**
-[Excute context](./execute_context.md)를 바탕으로, JS closure에 대해 이해한다.
+>
+> [Excute context](./execute_context.md)를 바탕으로, JS closure에 대해 이해한다.
 
 ## Dynamic Scope and Static Scope
 
