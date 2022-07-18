@@ -82,7 +82,7 @@ print(f'Hello, {name}! 성적은 {score}') # => Hello, Ben! 성적은 100
 
 ## None Type
 
-값이 없음
+**값이 없음**
 일반적으로 반환 값이 없는 함수에서 사용
 
 ## Boolean Type
@@ -103,7 +103,7 @@ print(f'Hello, {name}! 성적은 {score}') # => Hello, Ben! 성적은 100
 - A and B  모두 True → True
 - A or B  모두 False → False
 - Not  True → False, False → True
-- 우선순위 not > and > or
+- **우선순위 not > and > or**
 
 ```python
 print(not True and False or not False) # True
@@ -111,7 +111,7 @@ print(not True and False or not False) # True
 
 ### Truthy False
 
-False는 아니지만, False로 취급되는 다양한 값
+**False는 아니지만, False로 취급되는 다양한 값**
 
 - 0
 - 0.0
@@ -121,9 +121,11 @@ False는 아니지만, False로 취급되는 다양한 값
 - None
 - ''(빈 문자열)
 
+Falsy가 아닌 값은 모두 Truthy
+
 ### 논리 연산자의 단축 평가
 
-- 결과가 확실한 경우 두번째 값은 확인하지 않고 첫번째 값 반환
+- **결과가 확실한 경우 두번째 값은 확인하지 않고 첫번째 값 반환**
     - and  첫 값이 False인 경우 무조건 False ⇒ 첫번째 값 반환
     - or 첫 값이 True인 경우 무조건 True ⇒ 첫번째 값 반환
 
@@ -143,7 +145,7 @@ print(0 or 0) # 0
 
 # 컨테이너 Container
 
-데이터를 여러 개 저장하는 객체
+**데이터를 여러 개 저장**하는 **객체**
 서로 다른 Type 저장 가능
 
 ## 분류
@@ -164,24 +166,37 @@ Ordered, Unordered로 크게 분류
 
 ## 리스트 List Type
 
+### 선언
+- [] 또는 list()
+### 순서 
 - 순서가 있다. 0번째 부터
-- 생성
-    - [] 또는 list()
-    - 어떤 자료형도 저장 가능
-    - 내용 변경 가능
-- 접근
-    - 인덱스
-    - list[i] (i == 0, 1, 2, ...)
+### 중복
+- 중복 허용
+### 접근
+- 인덱스
+- list[i] (i == 0, 1, 2, ...)
+### 수정, 추가, 삭제
+- 수정 가능
+- 추가 append(), insert(), extend()
+- 삭제 remove(), pop(), clear()
 
 ## 튜플 Tuple Type
 
-- 리스트와 동일하지만, 내용 변경 불가능(immutable)한 시퀀스
-- 생성 및 접근
-    - () 또는 tuple()
-    - 인덱스로 접근 가능 tuple[i]
-- 주의사항
-    - 단일 항목 튜플 (1,) (반드시 뒤에 ,)
-    - 복수 항목 튜플 (1, 2, 3,) (, 권장)
+리스트와 동일하지만, 내용 변경 불가능(immutable)한 시퀀스
+
+### 선언
+- () 또는 tuple()
+### 순서
+- 순서 있음
+### 중복
+- 중복 허용
+### 접근
+- 인덱스로 접근 가능 tuple[i]
+### 수정, 추가, 삭제
+- **튜플은 수정, 추가, 삭제가 불가능** 
+### 주의사항
+- 단일 항목 튜플 (1,) (반드시 뒤에 ,)
+- 복수 항목 튜플 (1, 2, 3,) (, 권장)
 
 ### 튜플 대입
 ```python
@@ -242,16 +257,27 @@ s[::-1] # 'ihgfedcba'
 - 순서 상관 없음(인덱스로 접근 불가)
 - mutable 가변 자료형
 
-### Set 생성
+### 선언
 
 - {} 또는 set()
 - 빈 set를 만들 땐, 반드시 set() 사용
     - type({})는 dict
 
-### Set 활용
+### 중복
 
-- 다른 컨테이너의 중복된 값을 쉽게 제거
+- **중복 허용 X**
+- **다른 컨테이너의 중복된 값을 쉽게 제거**
 - 단, 순서가 없어진다.
+
+### 접근
+
+- 순서가 없어, index를 이용한 접근 불가
+
+### 수정, 추가, 삭제
+
+- 수정 불가
+- 추가 add(), update()
+- 삭제 remove(), discard(), pop(), clear()
 
 ### Set 집합 연산
 
@@ -262,8 +288,7 @@ s[::-1] # 'ihgfedcba'
 
 ## Dictionary Type 딕셔너리
 
-- key - value 쌍으로 이뤄진 자료형
-- 3.7v 부터 ordered
+- key-value 쌍으로 이뤄진 자료형
 
 ### Key
 
@@ -274,10 +299,30 @@ s[::-1] # 'ihgfedcba'
 
 - 모든 type 사용 가능
 
-### 생성 및 접근
+### 선언
 
 - {} 혹은 dict()
+
+### 순서
+
+- 3.7v 부터 ordered
+
+### 중복
+
+- 중복 허용 X
+
+### 접근
+
 - key를 통해 value에 접근
+
+### 수정, 추가, 삭제
+
+- value 수정 가능
+- 추가
+    - d[key] = val
+    - update() 메소드
+- 삭제
+    - pop(), popitem(), clear() 메소드
 
 ```python
 # a, b가 같은 내용을 갖는다.
