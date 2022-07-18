@@ -26,6 +26,12 @@ print(x, y) # => 20 10
 - 첫 글자에 숫자 X
 - 대소문자 구별
 - keyword는 예약어. 식별자 이름으로 사용할 수 없음(keyword.kwlist)
+
+```python
+import keyword
+print(keyword.kwlist)
+```
+
 - 내장 함수나 모듈 등도 사용하지 말아야 한다.
 
 # 자료형 Data Type
