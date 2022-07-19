@@ -32,8 +32,13 @@ print(mytripler(11))
 map, filter, reduce 함수는 첫 인자로 함수를 받는다. 
 이 위치에 임시로 lambda 함수를 사용한다.
 
-map(int, lambda x: 
-
+```python
+# 이전 가격
+oldPrice = [['mbp', 1200], ['ipad', 500], ['iphone', 900]] 
+# 새 가격. 10% 인상
+newPrice = list(map((lambda x: [x[0],int(x[1] * 1.1)]), oldPrice))
+print(newPrice) # [['mbp', 1320], ['ipad', 550], ['iphone', 990]]
+```
 3. sort(), sorted()와 사용
 
 - list.sort(reverse=Boolean, key=function)
@@ -48,7 +53,7 @@ cropList.sort(key=lambda x : -x[1]) # 내림차순
 cropList.sort(key-lambda x : x[1]) # 오름차순
 
 # 가장 낮은 가격의 필기구 이름 출력
-print(cropList[-1][0])
+print(cropList[-1][0]) # '연필'
 ```
 
 ## Reference
