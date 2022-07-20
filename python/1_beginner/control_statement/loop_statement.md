@@ -6,7 +6,7 @@
 
 ## for
 
-iterable object의 element를 모두 순회
+**iterable object의 element를 모두 순회**
 
 ### What is iterable?
   - Data Type
@@ -34,7 +34,7 @@ for elementsVariable in iterable:
 
 keys(), values()
 - list 리턴 
-- `dict_keys(['k1', 'k2']` `dict_values([v1, v2])`
+- `dict_keys(['k1', 'k2'])` `dict_values([v1, v2])`
 
 items()
 - list 안에 튜플 리턴 
@@ -42,7 +42,7 @@ items()
 
 ### Enumerate 순회
 
-(idx, value) 튜플로 구성된 열거(enumerate) 객체 반환
+(idx, value) 튜플로 구성된 열거(enumerate) **객체 반환**
 
 #### Syntax
 
@@ -54,24 +54,36 @@ list(enumerate(members)) # [(0, 'a'), (1, 'b'), (2, 'c')]
 
 ### List Comprehension
 
-특정 값을 가진 리스트를 생성하는 간결한 코드
+기존 iterable에서, **조건**을 만족하는 **새로운 리스트**를 짧고 간결하게 생성할 수 있는 문법이다.
+
+[w3s - list comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
 
 #### Syntax
 
 ```python
-# code가 list element가 된다.
-newList1 = [code for variable in iterable]
-newList2 = [code for variable in iterable if condition]
+# 문법이 복잡하지만 코드를 읽으면 문맥이 있다.
+newList = [expression for item in iterable if condition == True]
 ```
 
 ```python
-# ex code
+# ex1
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist) ['apple', 'banana', 'mango']
+```
+
+```python
+# ex2
+newlist = [x for x in range(10) if x < 5] # [0, 1, 2, 3, 4]
 ```
 
 ### Dictionarary Comprehension
 
-특정 값을 가진 딕셔너리를 생성하는 간결한 코드
+list comprehension과 유사하나, dictionary로 평가되는 표현식
+
+[programiz - dictionary comprehension](https://www.programiz.com/python-programming/dictionary-comprehension)
 
 #### Syntax
 
@@ -81,8 +93,12 @@ newDict2 = {key: value for variable in iterable if condition}
 ```
 
 ```python
-# ex code
+# 달러 가격을 원화 가격으로 변경
+usdPrice = {'milk': 1, 'coffee': 3, 'bread': 2}
+DOLLAR_TO_KRW = 1300
 
+krwPrice = {item: value*DOLLAR_TO_KRW for (item, value) in usdPrice.items()}
+print(krwPrice)
 ```
 
 ## loop control

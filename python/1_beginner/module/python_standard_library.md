@@ -4,8 +4,6 @@
 
 파이썬에 기본적으로 설치된 모듈과 내장 함수
 
-random.py
-
 ## 파이썬 패키지 관리자(pip)
 
 PyPi(Python Package Index)에 저장된 외부 패키지들을 설치하도록 도와주는 패키지 관리 시스템
@@ -13,6 +11,7 @@ PyPi(Python Package Index)에 저장된 외부 패키지들을 설치하도록 �
 ### 명령어
 
 ### 패키지 설치
+
 - 최신 버전 / 특정 버전 / 최소 버전 명시 설치
 
 `$ pip install SomePackage`

@@ -1,7 +1,6 @@
 # Python Scope
 
-함수는 코드 내부에 local scope를 생성
-그 외의 공간 global scope
+scope와 variable의 관계
 
 scope
 - local scope
@@ -47,16 +46,6 @@ variable
 
 **함수 내에서 바깥 scope의 변수에 접근 가능하나 수정은 할 수 없음**
 
-```python
-print(sum) # <built-in function sum>
-
-sum = 5 # 이제 built-in scope에 도달하기 전에 sum을 찾아버림
-
-# sum 함수를 사용할 수 없게 된다.
-print(sum) # 5
-print(sum(range(2))) # TypeError: 'int' object is not callable
-```
-
 ## global 문
 
 현재 코드 블록 전체에 적용.
@@ -76,4 +65,4 @@ global과 달리 이미 존재하는 이름과의 연결만 가능함
 ## 함수의 범위 주의
 
 global, nonlocal 키워드는 지양
-argument, return값을 사용하는 것을 추천
+=> argument, return값을 사용하는 것을 추천

@@ -15,7 +15,6 @@
   - 함수 출력(output)
   - 함수 입력(input)
   - 파이썬 범위(scope)
-  - 함수 문서화(doc-string)
   - 함수 응용
 - [Module 모듈](./module/)
   - 모듈과 패키지

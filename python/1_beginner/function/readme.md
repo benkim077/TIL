@@ -2,8 +2,8 @@
 
 ## Why Use Function?
 
-- 분해(Decomposition)
-- 추상화(Abstraction)
+- **분해(Decomposition)**
+- **추상화(Abstraction)**
 
 ### Decomposition
 
@@ -17,9 +17,8 @@
 
 ## Index
 
-- 함수 기초(intro)
-- 함수 출력(output)
-- 함수 입력(input)
-- 파이썬 범위(scope)
-- 함수 문서화(doc-string)
-- 함수 응용
+- [함수 기초(intro)](./function_intro.md)
+- [함수 출력(output)](./function_output.md)
+- [함수 입력(input)](./function_input.md)
+- [파이썬 범위(scope)](./python_scope.md)
+- [함수 응용](./function_usage.md)

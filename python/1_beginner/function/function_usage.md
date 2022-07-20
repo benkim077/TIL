@@ -10,31 +10,30 @@
 
 `map(function, iterable)`
 
-iterable의 모든 요소에 function 적용하고, 
-그 결과를 map object로 반환
+**iterable의 모든 요소에 function 적용하고, 
+그 결과를 map object로 반환**
 
 ### filter
 
 `filter(function, iterable)`
 
-iterable의 모든 요소에 function 적용하고,
-그 결과가 True인 것들을 filter object로 반환
-
+**iterable의 모든 요소에 function 적용하고,
+그 결과가 True인 것들을 filter object로 반환**
 ### zip
 
 `zip(*iterables)`
 
 복수의 iterable을 모아 튜플을 원소로 하는 zip object를 반환
 
-iterable을 세로로 묶는다고 생각
+**iterable을 세로로 묶는다**고 생각
 
 ## lambda 함수
 
 `lambda[parameter]: expression`
 
-익명함수. 한 번 쓰고 말 것.
+**익명함수**, **일회용 함수**
 
-[재귀함수 참고](../lambda.md)
+[람다 참고](../lambda.md)
 
 ## recursive function 재귀함수
 
@@ -50,7 +49,7 @@ iterable을 세로로 묶는다고 생각
 
 base case에 도달할 때까지 함수를 계속 호출
 
-메모리 스택이 넘치면(stack overflow) 프로그램이 넘치게 않게 됨
+메모리 스택이 넘치면(stack overflow) 프로그램이 동작하지 않게 됨
 
 파이썬에서는 최대 재귀 깊이(maximum recursion depth)가 1,000번으로, 호출 횟수가 이를 넘어가게 되면 Recursion Error 발생
 
