@@ -48,6 +48,7 @@ items()
 
 ```python
 # enumerate(iterable[,start=0])
+members = ['a', 'b', 'c']
 list(enumerate(members)) # [(0, 'a'), (1, 'b'), (2, 'c')]
 ```
 

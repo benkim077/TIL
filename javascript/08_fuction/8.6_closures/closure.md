@@ -1,4 +1,11 @@
 # Closure
+
+> **키워드**
+>
+> - 함수 선언
+> - static scope
+> - 중첩 함수
+
 > **배경**
 >
 > Local scope에서 global scope에 접근하는 것은 가능하다.

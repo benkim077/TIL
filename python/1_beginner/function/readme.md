@@ -20,6 +20,6 @@
 - 함수 기초(intro)
 - 함수 출력(output)
 - 함수 입력(input)
-- 함수 범위(scope)
+- 파이썬 범위(scope)
 - 함수 문서화(doc-string)
 - 함수 응용

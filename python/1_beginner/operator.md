@@ -16,9 +16,9 @@
 
 논리 연산자
 
-- A and B  모두 True → True
-- A or B  모두 False → False
-- Not  True → False, False → True
+- A and B  모두 True == True
+- A or B  모두 False == False
+- not True == False, not False == True
 - **우선순위 not > and > or**
 
 ```python
