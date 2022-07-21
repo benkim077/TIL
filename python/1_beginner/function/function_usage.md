@@ -28,7 +28,9 @@
 
 복수의 iterable을 모아 튜플을 원소로 하는 zip object를 반환
 
-**iterable을 세로로 묶는다**고 생각
+같은 길이의 **iterable을 세로로 묶는다**고 생각
+
+`pair = list(zip(girls, boys))` 
 
 ## lambda 함수
 
@@ -56,6 +58,37 @@ base case에 도달할 때까지 함수를 계속 호출하므로
 ### 재귀함수 반복문으로 표현
 
 재귀함수를 반복문으로, 반복문을 재귀함수로 바꿀 수 있다.
+
+```python
+# 피보나치 재귀
+def fib_recursive(n):
+    if n < 2:
+        return n
+    else:
+        return fib_recursive(n-1) + fib_recursive(n-2)
+```
+
+```python
+# 피보나치 반복문
+def fib_loop(n):
+  
+    aList = [0, 1]
+    for _ in range(2, n + 1):
+        aList.append(aList[-1] + aList[-2])
+    return aList[-1]
+```
+
+```python
+# 피보나치 반복문2
+def fib_loop_2(n):
+    if n < 2:
+        return n
+    num1, num2 = 0, 1
+    for _ in range(0, n-1):
+        num2, num1 = num1 + num2, num2
+    
+    return num2
+```
 
 ### 재귀함수 반복문 비교
 

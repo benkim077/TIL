@@ -124,9 +124,11 @@ func(1, 2, 3, 'a', 'b')
  
 **kwargs는 딕셔너리로 묶여 처리
 
+
+
 ```python
 def family(**kwargs):
-  for key, value in kwargs.items():
+  for key, value in kwargs.items(): # dict를 활용하고 싶으면 items()를 써라?
     print(key, ':', value)
 
 family(father= '아부지', mother= '어무니', baby = '아기')

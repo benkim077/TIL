@@ -30,11 +30,17 @@ for elementsVariable in iterable:
 - 기본으로 key를 순회, 루프 안에서 `dict[key]`로 value에 접근
 
 ```python
-# example code
-
+# dict의 값, type에 대해 잠시 확인해보자.
+my_dict = {'영어': 'Hello', '한국어': '안녕하세요'}
+print(my_dict) # {'영어': 'Hello', '한국어': '안녕하세요'}
+print(type(my_dict)) # <class 'dict'>
+print(my_dict.items()) # dict_items([('영어', 'Hello'), ('한국어', '안녕하세요')])
+print(type(my_dict.items())) # <class 'dict_items'>
 ```
 
 #### 메서드 활용 순회
+
+**결국 dict를 iterable로 활용하려면, 메서드를 사용해야 한다.**
 
 keys(), values()
 - list 리턴 
