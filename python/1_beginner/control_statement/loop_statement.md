@@ -4,9 +4,13 @@
 
 조건이 참인 경우 반복적으로 코드 실행
 
+**조건**을 알고 있을 때 while을 사용하자.
+
 ## for
 
 **iterable object의 element를 모두 순회**
+
+**범위**를 알고 있다면 for를 사용하자.
 
 ### What is iterable?
   - Data Type
@@ -42,19 +46,30 @@ items()
 
 ### Enumerate 순회
 
-(idx, value) 튜플로 구성된 열거(enumerate) **객체 반환**
+**(idx, value) 튜플**로 구성된 열거(enumerate) **객체 반환**
+
+idx와 value를 같이 쓰고 싶을 때 사용한다.
 
 #### Syntax
 
 ```python
 # enumerate(iterable[,start=0])
-members = ['a', 'b', 'c']
-list(enumerate(members)) # [(0, 'a'), (1, 'b'), (2, 'c')]
+members = ['kim', 'lee', 'park']
+list(enumerate(members)) # [(0, 'kim'), (1, 'lee'), (2, 'park')]
+```
+
+```python
+members = ['kim', 'lee', 'park']
+for (idx, name) in enumerate(members, start=1): # (idx, name)에서 괄호는 필요없지만, 튜플임을 강조하기 위해서 써봄.
+    print(i, name)
 ```
 
 ### List Comprehension
 
 기존 iterable에서, **조건**을 만족하는 **새로운 리스트**를 짧고 간결하게 생성할 수 있는 문법이다.
+
+comprehension 기능 굳이 쓸 필욘 없다. **가독성이 안 좋다.** 
+python에 익숙해지면 도전하자.
 
 [w3s - list comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
 

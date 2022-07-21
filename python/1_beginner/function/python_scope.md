@@ -1,8 +1,9 @@
 # Python Scope
 
-scope와 variable의 관계
+> scope와 variable의 관계
 
 scope
+
 - local scope
   - 함수가 만든 scope. 
   - 함수 내부에서만 참조 가능
@@ -10,6 +11,7 @@ scope
   - 어디에서든 참조할 수 있는 공간
 
 variable
+
 - local variable 로컬 변수
   - 로컬 스코프에 정의된 변수
 - global variable 글로벌 변수
@@ -28,9 +30,9 @@ variable
 
 ## 이름 검색 규칙(Name Resolution)
 
-파이썬에서 사용되는 이름들은 이름공간(namespace)에 저장되어 있음
+식별자들은 namespace에 저장되어 있음
 
-이름을 찾아가는 scope 순서. LEGB Rule
+식별자를 찾아가는 scope 순서. LEGB Rule
 
 - Local scope
   - 지역 범위
@@ -53,8 +55,10 @@ variable
 나열된 식별자가 global variable임을 나타냄
 
 주의사항
-- global에 나열된 식별자는 같은 코드 블록에서 global 앞에 등장할 수 없음
-- global에 나열된 이름은 parameter, for 루프 대상, 클래스/함수 등으로 정의되지 않아야 함.
+
+- global 식별자는 코드 블록에서 global 앞에 등장할 수 없음
+- global 식별자는 parameter, for 루프 대상, 클래스/함수 등으로 정의되지 않아야 함.
+- `global a = 3`말고 `global a` `a = 3` 따로 써야 함.
 
 ## nonlocal
 

@@ -13,14 +13,14 @@
 
 ### 모듈 불러오기
 
-`import module`
+`import moduleName as name` as name 별명 지정하기
 
-`from module import var, function, Class`
+`from moduleName import var, function, Class`
 
-`from module import *`
+`from moduleName import *`
 
 ### 패키지 불러오기
 
-`from package import module`
+`from package import moduleName`
 
-`from package.module import var, function, Class`
+`from package.moduleName import var, function, Class`

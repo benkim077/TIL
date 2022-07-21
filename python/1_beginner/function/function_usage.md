@@ -11,7 +11,9 @@
 `map(function, iterable)`
 
 **iterable의 모든 요소에 function 적용하고, 
-그 결과를 map object로 반환**
+그 결과를 map class object로 반환**
+
+주로 list로 치환해서 사용
 
 ### filter
 
@@ -19,6 +21,7 @@
 
 **iterable의 모든 요소에 function 적용하고,
 그 결과가 True인 것들을 filter object로 반환**
+
 ### zip
 
 `zip(*iterables)`
@@ -31,27 +34,24 @@
 
 `lambda[parameter]: expression`
 
-**익명함수**, **일회용 함수**
+한 번 쓸 목적으로 사용하는 **익명함수**, **일회용 함수**
 
 [람다 참고](../lambda.md)
 
 ## recursive function 재귀함수
 
-자기 자신을 호출하는 함수
+자신을 호출하는 함수
 
 알고리즘 설계 및 구현에서 활용
-
-코드의 가독성 높아짐
 
 1개 이상의 base case가 존재하고, 수렴하도록 작성
 
 ### 재귀함수 주의사항
 
-base case에 도달할 때까지 함수를 계속 호출
-
+base case에 도달할 때까지 함수를 계속 호출하므로
 메모리 스택이 넘치면(stack overflow) 프로그램이 동작하지 않게 됨
-
-파이썬에서는 최대 재귀 깊이(maximum recursion depth)가 1,000번으로, 호출 횟수가 이를 넘어가게 되면 Recursion Error 발생
+파이썬에서는 최대 재귀 깊이(maximum recursion depth)가 1,000번으로, 
+호출 횟수가 이를 넘어가게 되면 Recursion Error 발생
 
 ### 재귀함수 반복문으로 표현
 
@@ -64,3 +64,5 @@ base case에 도달할 때까지 함수를 계속 호출
 재귀 호출은 변수 사용을 줄여줄 수 있음
 
 재귀 호출은 입력 값이 커질 수록 연산 속도가 오래 걸림
+
+`recursiveFunc(n)` n이 너무 크다면 사용하지 말기.

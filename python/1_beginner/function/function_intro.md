@@ -17,7 +17,7 @@
 
 ### 선언과 호출
 
-선언(정의)
+선언(정의) declare
 
 ```python
 def funcName(parameters):
@@ -25,7 +25,7 @@ def funcName(parameters):
   return returnValue
 ```
 
-호출
+호출 call
 
 ```python
 funcName(arguments)

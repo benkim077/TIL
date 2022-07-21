@@ -6,7 +6,7 @@
 
 - parameter
   - 함수 선언할 때, 함수 내부에서 사용되는 변수
-  - 매개변수
+  - 매개변수, 인수
 - argument
   - 함수 호출할 때, 넣어주는 값
   - 인자
@@ -20,13 +20,13 @@
 
 ### Positional Arguments
 
-argument의 순서 == parameter의 순서
-
-기본 규칙이다.
+argument의 순서 == parameter의 순서(default)
 
 ### Keyword Arguments
 
 varName을 통해, 특정 argument를 전달
+
+keyword argument를 쓰고 싶다면, parameter를 뒤쪽에 두는 게 좋다.
 
 ```python
 def add(x,y):
@@ -67,15 +67,15 @@ add(2) # 2
 
 ### 패킹 / 언패킹
 
-패킹
+#### 패킹
 
 - 여러 개의 데이터를 묶어서 변수에 할당하는 것
 
 `numbers = (1, 2, 3, 4, 5)`
 
-언패킹
+#### 언패킹
 
-- 시퀀스의 요소들을 여러 변수에 나누어 할당하는 것
+시퀀스의 요소들을 여러 변수에 나누어 할당하는 것
 
 `a, b, c, d, e = numbers`
 
@@ -83,11 +83,12 @@ add(2) # 2
 
 ```python
 numbers = (1, 2, 3, 4, 5) # 패킹
-a, b, c, d, e, f = numbers # 언패킹
-# ValueError
+a, b, c, d, e, f = numbers # 언패킹. 더 많은 것은 안 된다. ValueError
 ```
 
-언패킹시 ***variable**을 사용하면, **남은 요소를 리스트에** 담아준다.
+#### 더 적은 변수에 넣고 싶다면? *를 사용한다.
+
+언패킹시 **\*variable**을 사용하면, **남은 요소를 리스트에** 담아준다.
 
 ```python
 numbers = (1, 2, 3, 4, 5) # 패킹
@@ -100,6 +101,10 @@ print(rest) # [2, 3, 4]
 ```
 
 ### AsterisK와 *args(가변인자)
+
+*를 parameter에 사용해보자
+
+argument의 개수에 상관없이 parameter에 넣을 수 있다.
 
 ```python
 def func(*args): # 변경가능한 parameter
@@ -116,7 +121,7 @@ func(1, 2, 3, 'a', 'b')
 ### Arbitrary Keyword Arguments 가변 키워드 인자(**kwargs)
 
 몇 개의 키워드 인자를 받을지 모르는 함수를 정의할 때
-
+ 
 **kwargs는 딕셔너리로 묶여 처리
 
 ```python
