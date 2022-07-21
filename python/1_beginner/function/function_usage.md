@@ -15,6 +15,11 @@
 
 주로 list로 치환해서 사용
 
+```python
+# 입력값 2개 일 때
+a, b = map(int, input().split())    
+```
+
 ### filter
 
 `filter(function, iterable)`

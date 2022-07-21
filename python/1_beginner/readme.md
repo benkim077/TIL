@@ -26,3 +26,4 @@
 
 - lambda function
 - string method (translate)
+- string method (join)

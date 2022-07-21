@@ -66,8 +66,8 @@ list(enumerate(members)) # [(0, 'kim'), (1, 'lee'), (2, 'park')]
 
 ```python
 members = ['kim', 'lee', 'park']
-for (idx, name) in enumerate(members, start=1): # (idx, name)에서 괄호는 필요없지만, 튜플임을 강조하기 위해서 써봄.
-    print(i, name)
+for idx, name in enumerate(members, start=1): # 
+    print(idx, name)
 ```
 
 ### List Comprehension
