@@ -27,3 +27,4 @@
 - lambda function
 - string method (translate)
 - string method (join)
+- passing argument 함수 인자 전달 방식(call by assignment)
