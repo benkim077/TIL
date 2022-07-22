@@ -25,6 +25,8 @@
 ## Waiting for Indexing
 
 - lambda function
-- string method (translate)
-- string method (join)
+- string method translate()
+- string method join()
 - passing argument 함수 인자 전달 방식(call by assignment)
+- 파일 열기 open files
+- dict type method
