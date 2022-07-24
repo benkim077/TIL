@@ -50,9 +50,9 @@ add(2) # 2
 
 ## 정해지지 않은 여러 개의 Arguments 처리
 
-'print() 함수는 왜 여러 개 인자를 넣어도 될까?'
+> print() 함수는 왜 여러 개 인자를 넣어도 될까?
 
-정해지지 않은 여러 개의 argument를 처리하기 위해서 Asterisk(*)를 사용한다. 
+정해지지 않은, 여러 개의 argument를 처리하기 위해서 Asterisk(*)를 사용한다. 
 
 ### Arbitrary Arguments 가변 인자
 
@@ -78,13 +78,9 @@ add(2) # 2
 시퀀스의 요소들을 여러 변수에 나누어 할당하는 것
 
 `a, b, c, d, e = numbers`
+`a, b, c, d, e, f = numbers`(ValueError)
 
-언패킹시 변수의 개수와 할당하고자 하는 요소의 갯수가 동일해야 함
-
-```python
-numbers = (1, 2, 3, 4, 5) # 패킹
-a, b, c, d, e, f = numbers # 언패킹. 더 많은 것은 안 된다. ValueError
-```
+언패킹시 변수의 개수와 할당하고자 하는 요소의 갯수가 동일해야 함.
 
 #### 더 적은 변수에 넣고 싶다면? *를 사용한다.
 
@@ -98,6 +94,20 @@ print(a, b, rest) # 1 2 [3, 4, 5]
 
 a, *rest, e = numbers # 1, 5를 제외한 나머지를 rest에 대입
 print(rest) # [2, 3, 4]
+```
+
+함수 인수에 반복적인 값 넣기
+- 언패킹을 사용해, 함수 argument에 list의 element들을 넣을 수 있다.
+
+```python
+# 함수 argument에 어떻게 반복적으로 넣을까? 반복문으론 안될 것 같은데..
+# Unpacking(*)과 zip 함수로 list 만들기
+
+faang_list = [['F', 'A', 'A', 'N', 'G'],['Facebook', 'Apple', 'Amazon', 'Netflix', 'Google']]
+
+big_it_company_list = list(zip(*faang_list)) # *faang_list는 [...], [...] 가 된다.
+
+print(big_it_company_list) # [('F', 'Facebook'), ('A', 'Apple'), ('A', 'Amazon'), ('N', 'Netflix'), ('G', 'Google')]
 ```
 
 ### AsterisK와 *args(가변인자)
@@ -123,8 +133,6 @@ func(1, 2, 3, 'a', 'b')
 몇 개의 키워드 인자를 받을지 모르는 함수를 정의할 때
  
 **kwargs는 딕셔너리 자료형이다.
-
-
 
 ```python
 def family(**kwargs):
