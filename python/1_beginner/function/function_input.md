@@ -1,6 +1,11 @@
 # Function Input
 
-함수 입력
+함수 입력에 사용되는 개념들을 알아본다.
+
+키워드
+- parameter & argument
+- packing & unpacking
+- arbitrary arguments
 
 ## Parameter, Argument
 
@@ -18,11 +23,11 @@
 - 필수 argument : 없으면 에러
 - 선택 argument : 값을 전달하지 않아도 되는 경우는 기본값 전달
 
-### Positional Arguments
+#### Positional Arguments
 
 argument의 순서 == parameter의 순서(default)
 
-### Keyword Arguments
+#### Keyword Arguments
 
 varName을 통해, 특정 argument를 전달
 
@@ -37,7 +42,7 @@ add(2, y = 5)
 add(x = 2, 5) # Error. keyword argument 다음에 positional argument 활용할 수 없음
 ```
 
-### Default Arguments Values
+#### Default Arguments Values
 
 parameter의 기본값 지정해서 argument가 없어도 가능하게 함.
 
@@ -47,6 +52,57 @@ def add (x, y = 0): # 기본값 지정
 
 add(2) # 2
 ```
+
+---
+
+## 패킹 / 언패킹
+
+### 패킹
+
+- 여러 개의 데이터를 묶어서 변수에 할당하는 것
+
+`numbers = (1, 2, 3, 4, 5)`
+
+### 언패킹
+
+시퀀스의 요소들을 여러 변수에 나누어 할당하는 것
+
+`a, b, c, d, e = numbers`
+`a, b, c, d, e, f = numbers`(ValueError)
+
+언패킹시 변수의 개수와 할당하고자 하는 요소의 갯수가 동일해야 함.
+
+#### 언패킹 활용
+
+1. **변수 하나에 값 여러 개**를 넣고 싶다면? *를 사용한다.
+
+- 언패킹시 **\*variable**을 사용하면, **남은 요소를 리스트에** 담아준다.
+
+```python
+numbers = (1, 2, 3, 4, 5) # 패킹
+
+a, b, *rest = numbers # 1, 2를 제외한 나머지를 rest에 대입
+print(a, b, rest) # 1 2 [3, 4, 5]
+
+a, *rest, e = numbers # 1, 5를 제외한 나머지를 rest에 대입
+print(rest) # [2, 3, 4]
+```
+
+2. 함수 **인수에 반복적인 값** 넣기
+- 언패킹을 사용해, 함수 **argument에 list의 element**들을 넣을 수 있다.
+
+```python
+# 함수 argument에 어떻게 반복적으로 넣을까? 반복문으론 안될 것 같은데..
+# Unpacking(*)과 zip 함수로 list 만들기
+
+faang_list = [['F', 'A', 'A', 'N', 'G'],['Facebook', 'Apple', 'Amazon', 'Netflix', 'Google']]
+
+big_it_company_list = list(zip(*faang_list)) # *faang_list는 [...], [...] 가 된다.
+
+print(big_it_company_list) # [('F', 'Facebook'), ('A', 'Apple'), ('A', 'Amazon'), ('N', 'Netflix'), ('G', 'Google')]
+```
+
+---
 
 ## 정해지지 않은 여러 개의 Arguments 처리
 
@@ -63,51 +119,6 @@ add(2) # 2
 
 ```python
 
-```
-
-### 패킹 / 언패킹
-
-#### 패킹
-
-- 여러 개의 데이터를 묶어서 변수에 할당하는 것
-
-`numbers = (1, 2, 3, 4, 5)`
-
-#### 언패킹
-
-시퀀스의 요소들을 여러 변수에 나누어 할당하는 것
-
-`a, b, c, d, e = numbers`
-`a, b, c, d, e, f = numbers`(ValueError)
-
-언패킹시 변수의 개수와 할당하고자 하는 요소의 갯수가 동일해야 함.
-
-#### 더 적은 변수에 넣고 싶다면? *를 사용한다.
-
-언패킹시 **\*variable**을 사용하면, **남은 요소를 리스트에** 담아준다.
-
-```python
-numbers = (1, 2, 3, 4, 5) # 패킹
-
-a, b, *rest = numbers # 1, 2를 제외한 나머지를 rest에 대입
-print(a, b, rest) # 1 2 [3, 4, 5]
-
-a, *rest, e = numbers # 1, 5를 제외한 나머지를 rest에 대입
-print(rest) # [2, 3, 4]
-```
-
-함수 인수에 반복적인 값 넣기
-- 언패킹을 사용해, 함수 argument에 list의 element들을 넣을 수 있다.
-
-```python
-# 함수 argument에 어떻게 반복적으로 넣을까? 반복문으론 안될 것 같은데..
-# Unpacking(*)과 zip 함수로 list 만들기
-
-faang_list = [['F', 'A', 'A', 'N', 'G'],['Facebook', 'Apple', 'Amazon', 'Netflix', 'Google']]
-
-big_it_company_list = list(zip(*faang_list)) # *faang_list는 [...], [...] 가 된다.
-
-print(big_it_company_list) # [('F', 'Facebook'), ('A', 'Apple'), ('A', 'Amazon'), ('N', 'Netflix'), ('G', 'Google')]
 ```
 
 ### AsterisK와 *args(가변인자)
