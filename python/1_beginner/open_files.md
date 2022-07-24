@@ -8,11 +8,11 @@ python에서 외부 파일을 내용을 읽어서 사용하기
 
     - 파일 내용을 읽기
 
-    - `import json` json 모듈 필요
-
 2. `json.load(json_file)`
 
     - `.json` 파일 내용을 dict type으로 불러오기
+
+    - `import json` json 모듈 필요
 
 ## 디렉토리에 있는 파일 읽기
 
