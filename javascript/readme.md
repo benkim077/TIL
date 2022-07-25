@@ -18,6 +18,3 @@
 - Chapter 15 - 웹 브라우저의 자바스크립트
 - Chapter 16 - 노드와 서버 사이드 자바스크립트
 - Chapter 17 - 자바스크립트 도구와 확장
-
-## Reference
-- [자바스크립트 완벽 가이드](https://ebook.insightbook.co.kr/book/115)
