@@ -22,6 +22,7 @@
   - [사용자 모듈과 패키지](./module/user_module_and_package.md)
   - [가상환경](./module/virtual_environment.md)
 - [Data Structure Method](./data_structure_method.md)
+- [Shallow Copy and Deep Copy](./shallow_copy_and_deep_copy.md)
 
 ## Waiting for Indexing
 
