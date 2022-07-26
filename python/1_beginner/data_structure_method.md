@@ -20,6 +20,8 @@ str은 immutable
 
 - `s.index(x)` x의 첫 번째 위치를 반환. 없으면, 오류
 
+- `s.count(x)` x의 개수 반환
+
 ### 문자열 검증 메서드
 
 - `s.isalpha()` 알파벳 문자 여부(유니코드 상 Letter, 한국어 포함)
