@@ -6,6 +6,8 @@ method를 활용
 
 `data_structure.method()` 형태로 활용
 
+`.`는 dot operator 점 연산자.
+
 ## String Type
 
 str은 immutable
