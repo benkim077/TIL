@@ -1,8 +1,20 @@
-a = 3
-b = 4
+FAANG = {
+    'F': 'Facebook',
+    # 'A1': 'Apple',
+    # 'A2': 'Amazon',
+    'N': 'NEXON', # 잘못 입력했어요!
+    'G': 'Google',
+}
 
-b = a
-print(f'a = {a}, b = {b}')
+FAANG.update(N = 'Netflix') # update 하기
 
-a = 5
-print(f'a = {a}, b = {b}')
+print(FAANG) # {'F': 'Facebook', 'N': 'Netflix', 'G': 'Google'}
+
+AA = {
+    'A1': 'Apple',
+    'A2': 'Amazon',
+}
+
+FAANG.update(AA)
+
+print(FAANG) #

@@ -1,4 +1,6 @@
-# Call By Reference & Call by Value
+# Passing Arguments
+
+함수 인수 전달 방식
 
 ## intro
 
@@ -16,7 +18,7 @@ print(my_list) # [1, 2, 3]
 
 element가 my_list의 요소의 값을 복사했기 때문이다.
 
-## 함수 인자 전달 방식 Passing argument
+## Call By Reference & Call by Value
 
 함수를 호출할 때, 함수에 argument를 전달하는 방식은 다음과 같다.
 
@@ -36,16 +38,19 @@ element는 my_list의 실제 요소가 아니라, **값을 복사**한 것이다
 
 반면 Call by Reference는 주소를 참조하여 호출한다.
 
-### Call by Assignment
+## Call by Assignment in Python
 
 파이썬에선 call by assignment 방식.
 
-## 파이썬은 모든 것이 객체이다?
+call by assignment란, 전달받는 객체에 따라 객체의 참조방식이 결정된다는 의미이다.
 
-> 나의 예상 
+이때, 객체의 종류를 mutable, immutable object로 나눌 수 있다.
 
-> 미리 예상해보고, 공부해보자. 지식을 무조건 받아들이지 말자.
+### Mutable Object
 
-## 지역변수, 전역변수와의 관계?
+list, dict, set type
 
-## namespace와의 관계?
+### Immutable Object
+
+str, int, tuple
+

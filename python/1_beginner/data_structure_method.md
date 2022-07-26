@@ -74,9 +74,20 @@ str은 immutable
 
 - `.count(x)` x가 몇 개 존재하는지 갯수 반환
 
+```python
+# list에서 원하는 값을 모두 삭제하는 방법
+my_list = [1, 1, 2, 1, 2, 3, 1, 2, 3, 4]
+delete_value = 1
+
+for _ in range(my_list.count(delete_value)):
+    my_list.remove(delete_value)
+
+print(my_list) # [2, 2, 3, 2, 3, 4]
+```
+
 - `.sort(x)`, `sorted(list)` 리스트를 정렬
 
-    - `.sort(x)` 원본 리스트 정렬, None 반환
+    - `.sort([reverser=True | False, key=myFunc])` 원본 리스트 정렬, None 반환
 
     - `sorted(list)` 정렬된 리스트 반환, 원본 변경 없음
 
@@ -87,6 +98,10 @@ str은 immutable
 - immutable. 값에 영향을 미치지 않는 메서드만 지원
 
 - 그 외 메서드는 list와 대부분 동일
+
+- `.index(x)`
+
+- `.count(x)`
 
 ## Set
 
@@ -132,8 +147,44 @@ clear(), copy(), keys(), values(), items()
 
 - `my_dict[key]` 없으면 KeyError
 
+- `.setdefault(key[, default])` get과 비슷하다.
+
+    - key가 있으면, value를 리턴
+
+    - key가 없을 경우, default값을 갖는 key를 삽입하고, default를 리턴. default가 없을 경우 value와 리턴은 None이다.
+
 ### 추가 및 삭제
 
 - `.pop(key[,default])` key의 값을 반환, 삭제. 없을 경우 default 반환. default 없으면 KeyError
 
-- `.update(key = value)` key: value에 덮어쓰기. dictionary의 값을 매핑하며 업데이트 
+- `.update(other)` 
+
+    - other는 다른 dict나 key-value 쌍으로 되어 있는 모든 iterable.
+
+    - key: value에 덮어쓰기. dictionary의 값을 매핑하며 업데이트 
+
+    - keyword argument 사용
+
+```python
+FAANG = {
+    'F': 'Facebook',
+    # 'A1': 'Apple', # 입력 누락
+    # 'A2': 'Amazon',
+    'N': 'NEXON', # 잘못 입력했어요!
+    'G': 'Google',
+}
+
+FAANG.update(N = 'Netflix') # value update 하기
+
+print(FAANG) # {'F': 'Facebook', 'N': 'Netflix', 'G': 'Google'}
+
+AA = {
+    'A1': 'Apple',
+    'A2': 'Amazon',
+}
+
+FAANG.update(AA) # iterable 추가하기
+
+print(FAANG) # {'F': 'Facebook', 'N': 'Netflix', 'G': 'Google', 'A1': 'Apple', 'A2': 'Amazon'}
+
+```

@@ -23,12 +23,12 @@
   - [가상환경](./module/virtual_environment.md)
 - [Data Structure Method](./data_structure_method.md)
 - [Shallow Copy and Deep Copy](./shallow_copy_and_deep_copy.md)
+  - [Passing Argument](./passing_arguments.md)
 
 ## Waiting for Indexing
 
 - lambda function
 - string method translate()
 - string method join()
-- passing argument 함수 인자 전달 방식(call by assignment)
 - 파일 열기 open files
 - dict type method
