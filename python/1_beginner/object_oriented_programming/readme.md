@@ -6,15 +6,13 @@
 
     - [객체 지향 프로그래밍](./oop.md)
 
-    - [OOP 기초](./basic.md)
+    - [OOP 기초](./oop_basic.md)
 
-    - [객체와 클래스 문법](./object_and_class.md)
+    - [객체와 클래스 문법](./oop_object_and_class.md)
 
     - [OOP 속성](./oop_properties.md)
 
     - [OOP 메서드](./oop_method.md)
-
-    - [클래스 메서드](./class_method.md)
 
 - 객체 지향의 핵심 개념
 
