@@ -2,9 +2,9 @@
 
 ## 예외 처리
 
-- try 문(statement) / except 절(clause)을 이용하여 예외 처리
+> try-except을 이용하여 예외 처리
 
-- try 문
+- try
 
     - 오류가 발생할 가능성이 있는 코드를 실행
 
@@ -28,18 +28,20 @@
 
 ```python
 try:
-    try 명령문
-except 예외그룹1 as 변수1: # 반드시 한 개 이상의 except 절 필요
-    예외처리 명령문 1
-except 예외그룹2 as 변수2:
-    예외처리 명령문 2
+    try_명령문 # 에러 확인하고자 하는 부분을 넣자
+except ValueError as 변수1: # 반드시 한 개 이상의 except 절 필요
+    예외처리_명령문_1
+except ZeroDivisionError as 변수2:
+    예외처리_명령문_2
 finally: # optional
-    finally 명령문
+    finally_명령문
 ```
 
-- 발생 가능한 모든 에러를 명시하자.
+> 발생 가능한 모든 에러를 명시하자.
 
-- 순차적 실행, 가장 작은 범주부터 예외 처리 해야함. (elif 와 비슷하다.)
+- 순차적 실행, 가장 작은 하위 에러 범주부터 예외 처리 해야함.
+
+    - 위에서부터 아래로 확인하니까, 위에서 크게 걸러지면, 밑에 코드는 의미 없어짐.
 
 ### 에러 메시지 처리(as)
 
