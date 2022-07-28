@@ -50,6 +50,10 @@ s
 
 > 둘의 차이점은? 
 
+- `__gt__(self, other)` self > other. return bool 
+
+- `__eq__(self, other)` self == other. return bool
+
 ### 소멸자 메서드 destructor methods
 
 - 인스턴스 객체가 소멸(파괴)되기 직전에 호출되는 메서드
