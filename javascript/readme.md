@@ -1,4 +1,4 @@
-# JavaScript Programming Language
+# JavaScript
 
 ## Index
 - 01 - 자바스크립트 소개
