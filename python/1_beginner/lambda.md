@@ -48,9 +48,8 @@ print(newPrice) # [['mbp', 1320], ['ipad', 550], ['iphone', 990]]
 # 필기구 리스트
 cropList = [('샤프',3000), ('포스트잇',2000), ('노트',4500),('연필',1000)]
 
-# 리스트 가격(x[1])을 기준으로 내림차순 정렬
-cropList.sort(key=lambda x : -x[1]) # 내림차순
-cropList.sort(key-lambda x : x[1]) # 오름차순
+# 리스트 가격(crop[1])을 기준으로 내림차순 정렬
+cropList.sort(key=lambda crop : crop[1], reverse=True) 
 
 # 가장 낮은 가격의 필기구 이름 출력
 print(cropList[-1][0]) # '연필'

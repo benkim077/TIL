@@ -33,6 +33,12 @@ print(dir(tools)) # 사용할 수 있는 기능들을 보여준다.
 print(tools.add(1, 2)) # 3
 ```
 
-## 모듈 만들기
+## `__init__.py`
 
-## 모듈 활용하기
+- 패키지 import할 때 자동으로 실행되는 코드를 넣어준다.
+
+- 모듈을 초기화하는 역할을 한다.
+
+> 던더 이닛을 통해 모듈까지 접근하는 방법
+
+`import my_pac` > `from . import my_mod` > `from . import my_func`
