@@ -1,6 +1,12 @@
-# 에러 / 예외 처리
+# Error, Exception Handling
 
-## INDEX
+## Intro
+
+- 어떻게 디버깅할까?
+
+- 예외를 처리하는 방법
+
+## Section
 
 - [디버깅](./debugging.md)
 

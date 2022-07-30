@@ -1,6 +1,12 @@
-# 객체 지향 프로그래밍
+# Object Oriented Programming(OOP)
 
-## INDEX
+## Intro
+
+- Python의 객체지향 
+
+- 객체지향의 핵심 개념 4가지
+
+## Section
 
 - 객체 지향 프로그래밍
 

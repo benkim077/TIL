@@ -1,21 +1,23 @@
 # Function
 
-## Why Use Function?
+## Intro
+
+### Why Use Function?
 
 - **분해(Decomposition)**
 - **추상화(Abstraction)**
 
-### Decomposition
+#### Decomposition
 
 - 기능 분해
 - 재사용
 
-### Abstraction
+#### Abstraction
 
 - 함수의 내부 원리를 몰라도 괜찮다.
 - 함수의 이름, 기능만 알고 활용할 수 있다.
 
-## Index
+## Section
 
 - [함수 기초(intro)](./function_intro.md)
 - [함수 출력(output)](./function_output.md)

@@ -1,6 +1,6 @@
-# 제어문
+# Control Statement
 
-## 개요
+## Intro
 
 - 제어문을 통해 프로그램의 흐름(flow)를 제어한다.
 
@@ -10,7 +10,7 @@
 
 순서도(flow chart)를 활용해서 프로그램의 흐름을 파악하자.
 
-## 목차
+## Section
 
 - [조건문](./conditional_statement.md)
 
