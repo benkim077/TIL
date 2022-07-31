@@ -6,9 +6,9 @@
 
 - 코딩테스트 목적
 
-## Index
+## Part
 
-- [Features of Python]
+- [Features of Python](./features_of_python/)
 
 - [Linear Data Structure]
 
