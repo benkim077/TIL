@@ -4,6 +4,6 @@
 
 - [Pythonic](./pythonic.md)
 
-- [Big O, Data Type](./big_o_and_data_type.md)
+- [Big O](./big_o_and_data_type.md)
 
-- 
+- [Data Type](./data_type.md)
