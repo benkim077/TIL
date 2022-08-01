@@ -51,7 +51,7 @@ a + b + 3 # 12
 ```python
 # condition == True이면 trueValue가,
 # condition == False이면 FalseValue가 조건 표현식의 평가값이다.
-trueValue if condition else FalseValue # trueValue 또는 FalseValue로 평가
+is_true_value if condition else is_False_value # trueValue 또는 FalseValue로 평가
 ```
 
 ### Evaluate, How to Use
@@ -59,7 +59,7 @@ trueValue if condition else FalseValue # trueValue 또는 FalseValue로 평가
 ```python
 # 조건 표현식의 평가 및 활용
 age = 30
-isAdult = '성인' if age >= 20 else '미성년자'
+is_adult = '성인' if age >= 20 else '미성년자'
 ```
 
 ## Conditional Statement vs. Conditional Expression

@@ -2,27 +2,30 @@
 
 ## while
 
-조건이 참인 경우 반복적으로 코드 실행
+- 조건이 참인 경우 반복적으로 코드 실행
 
-**조건**을 알고 있을 때 while을 사용하자.
+- **조건**을 알고 있을 때 while을 사용하자.
 
 ## for
 
-**iterable object의 element를 모두 순회**
+- **iterable object의 element를 모두 순회**
 
-**범위**를 알고 있다면 for를 사용하자.
+- **범위**를 알고 있다면 for를 사용하자.
 
 ### What is iterable?
   - Data Type
+
     - string, list, dict, tuple, set
+
   - iterable function
+
     - range, enumerate
 
 ### Syntax
 
 ```python
-for elementsVariable in iterable:
-  # code
+for element in iterable:
+  pass
 ```
 
 ### Dictionary 순회
@@ -40,11 +43,13 @@ print(type(my_dict.items())) # <class 'dict_items'>
 
 #### 메서드 활용 순회
 
-**결국 dict를 iterable로 활용하려면, 메서드를 사용해야 한다.**
+**dict를 iterable로 활용하려면, 메서드를 사용해야 한다.**
 
-keys(), values()
-- list 리턴 
-- `dict_keys(['k1', 'k2'])` `dict_values([v1, v2])`
+- keys(), values()
+
+  - list 리턴 
+
+  - `dict_keys(['k1', 'k2'])` `dict_values([v1, v2])`
 
 items()
 - list 안에 튜플 리턴 
@@ -52,9 +57,9 @@ items()
 
 ### Enumerate 순회
 
-**(idx, value) 튜플**로 구성된 열거(enumerate) **객체 반환**
+- **(idx, value) 튜플**로 구성된 열거(enumerate) **객체 반환**
 
-idx와 value를 같이 쓰고 싶을 때 사용한다.
+- idx와 value를 같이 쓰고 싶을 때 사용한다.
 
 #### Syntax
 
@@ -72,10 +77,9 @@ for idx, name in enumerate(members, start=1): #
 
 ### List Comprehension
 
-기존 iterable에서, **조건**을 만족하는 **새로운 리스트**를 짧고 간결하게 생성할 수 있는 문법이다.
+- 기존 iterable에서, **조건**을 만족하는 **새로운 리스트**를 짧고 간결하게 생성할 수 있는 문법이다.
 
-comprehension 기능 굳이 쓸 필욘 없다. **가독성이 안 좋다.** 
-python에 익숙해지면 도전하자.
+- comprehension 기능 굳이 쓸 필욘 없다. **가독성이 안 좋다.** python에 익숙해지면 도전하자.
 
 [w3s - list comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
 
@@ -83,7 +87,7 @@ python에 익숙해지면 도전하자.
 
 ```python
 # 문법이 복잡하지만 코드를 읽으면 문맥이 있다.
-newList = [expression for item in iterable if condition == True]
+newList = [expression for element in iterable if condition] # 조건이 참일 때, iterable의 element에 대해서, expression list를 새로 만든다.
 ```
 
 ```python
@@ -92,7 +96,7 @@ fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 
 newlist = [x for x in fruits if "a" in x]
 
-print(newlist) ['apple', 'banana', 'mango']
+print(newlist) # ['apple', 'banana', 'mango']
 ```
 
 ```python
@@ -109,8 +113,8 @@ list comprehension과 유사하나, dictionary로 평가되는 표현식
 #### Syntax
 
 ```python
-newDict1 = {key: value for variable in iterable}
-newDict2 = {key: value for variable in iterable if condition}
+newDict1 = {key: value for item in iterable}
+newDict2 = {key: value for item in iterable if condition}
 ```
 
 ```python
@@ -124,22 +128,24 @@ print(krwPrice)
 
 ## loop control
 
-반복문 제어
+- 반복문 제어
 
 ### break
 
-반복문 종료
+- 반복문 종료
 
 ### continue
 
-다음 반복 수행
+- 다음 반복 수행
 
 ### pass
 
-아무것도 하지 않음(있으나 마나)
+- 아무것도 하지 않음
+
+- 구조 잡을 때 사용
 
 ### for-else
 
-끝까지 반복문 실행한 이후에 else문 실행
+- 끝까지 반복문 실행한 이후에 else문 실행
 
 반복문 잘 끝났나 확인하는 용도로 많이 쓴다.
