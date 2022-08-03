@@ -4,14 +4,18 @@
 
 ## Chapter
 
-- Web
+- [Web](./web.md)
 
-- HTML
+- [HTML](./html.md)
 
-- HTML 기본 구조
+- [HTML 기본 구조](./html_basic_structure.md)
 
-- HTML 문서 구조화
+- [HTML 문서 구조화](./html_document_structuring.md)
+
+- [Settings](./settings.md)
 
 ## Not Indexed
 
 - semantic-element
+
+- dom

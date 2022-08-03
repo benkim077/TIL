@@ -22,7 +22,7 @@
 
     - Content 실제 내용
 
-- padding, margin shorthand
+- padding, margin shorthand (시험)
 
     - 하나는 전체
 
@@ -42,7 +42,7 @@
 
     - border: 2px dashed black;
 
-## Box Sizing
+## Box Sizing (시험)
 
 - 기본적으로 모든 요소의 box-sizing은 content-box
 
