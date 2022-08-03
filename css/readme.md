@@ -24,6 +24,10 @@
 
 - Card Styling
 
+- CSS Layout
+
+- Responsive Web
+
 ## Not Indexed
 
 > 폴더 확인해서 정리
