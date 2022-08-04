@@ -32,7 +32,7 @@
     
     - 4개는 상우하좌
 
-- border shorthand
+- border shorthand (시험)
 
     - border-width: 2px;
 
@@ -51,3 +51,5 @@
 - 우리는 border까지의 너비를 100px로 보는 것을 원함
 
     - box-sizing을 border-box로 설정
+
+    - `box-sizing: border-box`
