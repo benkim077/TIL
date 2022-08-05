@@ -22,17 +22,21 @@
 
     - Content 실제 내용
 
-- padding, margin shorthand (시험)
+- padding, margin shorthand 
+
+> 시험
 
     - 하나는 전체
 
-    - 2개는 상하/좌우
+    - 2개는 상하/좌우 (십자가)
     
-    - 3개는 상/좌우/하
+    - 3개는 상/좌우/하 (나누기)
     
     - 4개는 상우하좌
 
 - border shorthand (시험)
+
+> 시험
 
     - border-width: 2px;
 
@@ -42,13 +46,15 @@
 
     - border: 2px dashed black;
 
-## Box Sizing (시험)
+## Box Sizing
+
+> 시험
 
 - 기본적으로 모든 요소의 box-sizing은 content-box
 
     - padding을 제외한 순수 content 영역만을 box로 지정
 
-- 우리는 border까지의 너비를 100px로 보는 것을 원함
+- 우리는 border까지(컨텐트, 패딩, 보더)의 너비를 100px로 보는 것을 원함
 
     - box-sizing을 border-box로 설정
 

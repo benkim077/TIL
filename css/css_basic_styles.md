@@ -46,8 +46,6 @@
 
     - 항상 내가 보는 화면에 꽉 차는 정사각형을 만들고 싶다면,
 
-
-
 ## 색상 단위
 
 - 색상 키워드(background-color: red;)
@@ -60,6 +58,8 @@
 
 - 텍스트
 
+    - font-size
+
     - 서체(font-family)
 
     - 서체 스타일(font-style, font-weight)
@@ -69,6 +69,8 @@
     - 단어 간격(word-spacing)
 
     - 행간(line-height)
+
+        - `line-height: 50%;`를 통해 수직 정렬을 할 수 있다. 
 
 - 컬러(color)
 
