@@ -1,6 +1,6 @@
 # Box Model
 
-## CSS 원칙 1
+## CSS 원칙 1 ✔️
 
 - 모든 요소는 네모(박스모델)이고
 
@@ -22,9 +22,7 @@
 
     - Content 실제 내용
 
-- padding, margin shorthand 
-
-> 시험
+- padding, margin shorthand ✔️
 
     - 하나는 전체
 
@@ -34,9 +32,7 @@
     
     - 4개는 상우하좌
 
-- border shorthand (시험)
-
-> 시험
+- border shorthand (시험) ✔️
 
     - border-width: 2px;
 
@@ -46,9 +42,7 @@
 
     - border: 2px dashed black;
 
-## Box Sizing
-
-> 시험
+## Box Sizing ✔️
 
 - 기본적으로 모든 요소의 box-sizing은 content-box
 

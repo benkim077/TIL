@@ -12,9 +12,7 @@
 
 - grid
 
-- 기타
-
-    - Responsive Web Design, Media Queries
+- Responsive Web Design, Media Queries
 
 ## Float
 
@@ -56,7 +54,7 @@
 
 > 결국엔 왼쪽, 오른쪽으로 치워버리는 것 만 된다.
 
-## Flexbox
+## Flexbox ✔️
 
 - 행과 열 형태로 아이템들을 배치하는 레이아웃 모델
 
@@ -88,11 +86,9 @@
 
     - **inline 속성은 주변 요소들에 영향받는다고 이해하자.**
 
-## flexbox 속성
+## flexbox 속성 ✔️
 
-### flex 속성 구분
-
-#### container에 적용하는 속성
+### container에 적용하는 속성
 
 - display
 
@@ -108,7 +104,7 @@
 
 - align-content
 
-#### items에 적용하는 속성
+### items에 적용하는 속성
 
 - flex-basis
 
@@ -124,11 +120,11 @@
 
 - z-index
 
-### 배치 관련 속성들
+## 배치 관련 속성들
 
 > flex-direction과 flex-wrap
 
-#### flex-direction
+### flex-direction
 
 > main 축 방향을 설정하는 것. 배치 방향 설정
 
@@ -138,7 +134,7 @@
 
 - items 나열 순서를 바꿔준다.
 
-#### flex-wrap
+### flex-wrap
 
 > 줄넘김 처리 설정
 
@@ -154,55 +150,51 @@
 
     - 넘치면 그냥 빠져나감 컨테이너를 삐저나감 nowrap
 
-    - 역순으로 배치(최신 글이 위에 오게 하고 싶다면) wrap-reverse
+    - 역순으로 배치(최신 글이 위에 오게 하고 싶다면) wrap-reverse ✔️
 
-#### flex-flow
+### flex-flow
 
 - flex-direction과 flex-wrap의 shorthand
 
 - `flex-flow: row nowrap;`
 
-### 공간 배분 (정렬)
+## 정렬
 
 > flex-direction에서 정해진 축 방향을 바탕으로 축 위에서 어디에 놓고 싶은가?
 
-#### justify-content(main axis)
+### justify-content(main axis)
 
-- main axis 기준 공간 설정
+- main axis 기준으로 정렬
 
 - item 순서는 변하지 않고, 어디에 배치할 것인지 선택하는 것
 
 - `justify-content: flex-start(왼쪽에), flex-end(오른쪽에), center(가운데 모아서), space-between(items 사이 공간 균등하게), space-around(items의 양옆에 겹치지 않는 공간 하나씩), space-evenly(item 양옆에 겹치는 공간 하나씩)`
 
-#### align-content(cross axis)
+### align-content(cross axis)
 
-- cross axis를 기준으로 공간 배분
+- cross axis를 기준으로 정렬
 
-- **2줄 이상 되었을 때** cross axis 기준으로 공간 설정
+- **2줄 이상 되었을 때**
 
 - `align-content: flex-start, flex-end, center, space-between, space-around, space-evenly`
 
-### 정렬
+### align-items
 
-> 아이템 배치 디자인 설정하기
+> 1줄일 때 cross axis 기준으로 정렬
 
-#### align-items
+- 모든 아이템을 cross axis 기준으로
 
-> align-content 랑 비슷하네..
+    - stretch : 쭉 늘림
 
-- 모든 아이템을 cross axix 기준으로
+    - flex-start : 위에 붙임
 
-- stretch : 쭉 늘림
+    - flex-end : 아래
 
-- flex-start : 위에 붙임
+    - center : 가운데
 
-- flex-end : 아래
+    - baseline : 텍스트 baseline에 기준선
 
-- center : 가운데
-
-- baseline : 텍스트 baseline에 기준선
-
-#### align-self(개별 아이템)
+### align-self(개별 아이템)
 
 - 개별 아이템은 cross axis 기준으로 정렬
 
@@ -216,8 +208,12 @@
 
 - center
 
-### 기타 속성
+## 기타 속성
 
 - flex-grow : 남은 영역을 아이템에 분배
 
 - order : 배치 순서 바꾸기
+
+## 참고
+
+[Flexbox Froggy](https://flexboxfroggy.com/)

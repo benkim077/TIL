@@ -16,13 +16,11 @@
 
 - [개발자 도구](./dev_tools.md)
 
-- 추가 컨텐츠
-
-- [Box Positioning](./box_positioning.md)
-
 - [Card Styling](./card_styling.md)
 
-- [Layout](./css_layout.md)
+- [Layout - float, flex](./css_layout.md)
+
+- [CSS Framework - bootstrap](./css_framework.md)
 
 - [Responsive Web](./responsive_web.md)
 

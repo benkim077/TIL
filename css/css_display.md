@@ -30,9 +30,9 @@
 
 ## 블록 레벨 요소와 인라인 레벨 요소
 
-> * 자주쓰는거
+> \* 자주쓰는거
 
-블록 레벨 요소
+### 블록 레벨 요소
 
 - div *
 
@@ -44,9 +44,7 @@
 
 - form *
 
-등
-
-인라인 레벨 요소
+### 인라인 레벨 요소
 
 - span *
 
@@ -58,9 +56,7 @@
 
 - b, em, i *, strong
 
-등
-
-## inline? 요소 수평 정렬
+## block, inline 요소 수평 정렬
 
 - 왼쪽 정렬
 
@@ -92,11 +88,11 @@ display: inline-block
 
 - inline처럼 한 줄에 표시할 수 있고, block 처럼 width, height, margin 속성을 모두 지정할 수 있음
 
-display: none (시험)
+display: none ✔️
 
-- 코드에 있는데 element로 생성조차 되지 않는다. 
+- 코드에 있는데 element로 생성조차 되지 않는다.
 
 - 해당 요소를 화면에 표시하지 않고, 공간조차 부여되지 않음
 
-- visibility: hidden은 DOM 트리에 생성 됨. 해당 요소가 공간은 차지하나 화면에 표시만 하지 않는다.
+- visibility: hidden은 DOM 트리에 생성 됨. 해당 요소가 공간은 차지하나 화면에 표시만 하지 않는다. ✔️
 
