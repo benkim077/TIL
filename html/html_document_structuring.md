@@ -38,7 +38,7 @@
 
 - `<div>` 의미 없는 블록 레벨 컨테이너
 
-### form
+## form ✔️
 
 - 사용자에게 Data를 입력받아 서버에 제출하기(submit) 위해 사용하는 태그
 
@@ -52,7 +52,7 @@
 
         - post : 달라고 하는 것 말고는 다 post. 민감한 정보에 사용
 
-### input
+### input 
 
 - 사용자의 입력을 받는 부분을 만들어 준다.
 
@@ -76,7 +76,7 @@
 
     - required, readonly, autofocus, autocomplete, disabled
 
-### input label
+### label 
 
 - input에 id 속성, labal에 for 속성을 활용하여 상호 연관 시킴(관계 설정)
 
@@ -110,6 +110,17 @@
 
     - radio : 단일 선택
 
+```html
+<!--라디오 버튼 만들기-->
+<div>
+    <p>OS를 선택해주세요.</p>
+    <input type="radio" name="OS" id="Windows" value="Windows" checked>
+    <label for="Windows">윈도우</label><br>
+    <input type="radio" name="OS" id="MacOS" value="MacOS">
+    <label for="MacOS">맥</label><br>
+</div>
+```
+
 ### input type 속성 - 기타
 
 - 다양한 종류의 input을 위한 picker를 제공
@@ -122,11 +133,10 @@
 
     - hidden : 사용자에게 보이지 않는 input. 숨겨서 서버로 같이 전송해야 할 때 사용.
 
-### select
-
-드랍다운 선택 만들기
+## select
 
 ```html
+<!--드랍다운 선택 만들기-->
 <div>
     <label for="region">지역을 선택해주세요.</label><br>
     <select name="region" id="region" required>
@@ -135,17 +145,5 @@
         <option value="대전">대전</option>
         <option value="광주">광주</option>
     </select>
-</div>
-```
-
-라디오 버튼 만들기
-
-```html
-<div>
-    <p>OS를 선택해주세요.</p>
-    <input type="radio" name="OS" id="Windows" value="Windows" checked>
-    <label for="Windows">윈도우</label><br>
-    <input type="radio" name="OS" id="MacOS" value="MacOS">
-    <label for="MacOS">맥</label><br>
 </div>
 ```

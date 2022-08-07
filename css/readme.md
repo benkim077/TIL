@@ -2,31 +2,29 @@
 
 ## Chapter
 
-- CSS
+- [CSS](./css.md)
 
-- CSS Selectors
+- [Selectors](./css_selectors.md)
 
-- CSS 기본 스타일
+- [CSS 기본 스타일](./css_basic_styles.md)
 
-- Selectors 심화
+- [Box Model](./css_box_model.md)
 
-- CSS Box Model
+- [Display](./css_display.md)
 
-- CSS Display
+- [Position](./css_position.md)
 
-- CSS Position
-
-- 개발자 도구
+- [개발자 도구](./dev_tools.md)
 
 - 추가 컨텐츠
 
-- Box Positioning
+- [Box Positioning](./box_positioning.md)
 
-- Card Styling
+- [Card Styling](./card_styling.md)
 
-- CSS Layout
+- [Layout](./css_layout.md)
 
-- Responsive Web
+- [Responsive Web](./responsive_web.md)
 
 ## Not Indexed
 

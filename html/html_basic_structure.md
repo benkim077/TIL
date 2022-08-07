@@ -96,7 +96,7 @@
 
     - 웹사이트 코드를 사용자가 보게 되는 웹사이트로 바꾸는 과정
 
-### DOM(Document Object Model) 트리
+## DOM(Document Object Model) 트리 ✔️
 
 - 텍스트 파일인 HTML 문서를 브라우저에서 렌더링하기 위한 구조
 

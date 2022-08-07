@@ -111,7 +111,7 @@ bootstrap docs를 보면서 사용하자.
 
     - card - grid card
 
-## Responsive Web Design
+## Responsive Web Design ✔️
 
 - 반응형 웹 디자인
 
@@ -131,7 +131,7 @@ bootstrap docs를 보면서 사용하자.
 
     - container : column들을 담고 있는 공간
 
-### Bootstrap grid System
+### Bootstrap grid System ✔️
 
 - Bootstrap Grid system은 flexbox로 제작됨
 

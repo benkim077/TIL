@@ -75,12 +75,13 @@ for _ in range(10):
             else:
                 break
         
+        # 최솟값, 인덱스를 저장
         if count > 0:
             if temp_value > count or temp_value == 0:
                 temp_idx = start_idx
                 temp_value = count
 
-
+    # 인덱스 출력
     print(f'#{T} {temp_idx}')
 
 '''
