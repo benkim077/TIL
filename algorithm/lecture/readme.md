@@ -2,7 +2,7 @@
 
 ## Chapter
 
-- Array
+- [Array](./array/)
 
 - String
 

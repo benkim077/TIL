@@ -104,6 +104,11 @@ print(newlist) # ['apple', 'banana', 'mango']
 newlist = [x for x in range(10) if x < 5] # [0, 1, 2, 3, 4]
 ```
 
+```python
+# 2차원 배열을 만들 때, 참조 때문에 문제가 생길 수 있다. 그럴 때 list comprehension을 사용.
+[[0]*5 for _ in range(5)] # 2차원 배열 [[0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0][0, 0, 0, 0, 0]] 
+```
+
 ### Dictionarary Comprehension
 
 list comprehension과 유사하나, dictionary로 평가되는 표현식

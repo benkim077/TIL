@@ -10,11 +10,11 @@
 
 - [Program Unit 프로그램 구성 단위](./program_unit.md)
 
-- [Control Statement 제어문](./control_statement/)
+- [Control Statement 제어문](./control_statement/readme.md)
 
-- [Function 함수](./function/)
+- [Function 함수](./function/readme.md)
 
-- [Module 모듈](./module/)
+- [Module 모듈](./module/readme.md)
 
 - [Data Structure Method](./data_structure_method.md)
 
