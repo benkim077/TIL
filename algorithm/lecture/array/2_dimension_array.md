@@ -97,6 +97,10 @@ for i in range(N):
 
 - `arr[i][j], arr[j][i] = arr[j][i], arr[i][j]`를 하면 된다.
 
+#### 메서드를 이용한 전치행렬
+
+`arr_T = list(zip(*arr))`는 arr의 전치행렬이다
+
 ### 2차원 배열 연습문제
 
 ```python
