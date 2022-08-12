@@ -27,11 +27,3 @@ for t in range(1, T+1):
                 rlt = temp
 
     print(f'#{t} {rlt}')
-# test case 49
-# 1
-# 5 2
-# 1 3 3 6 7
-# 8 13 9 12 8
-# 4 16 11 12 6
-# 2 4 1 23 2
-# 9 13 4 7 3
