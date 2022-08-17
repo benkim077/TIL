@@ -4,7 +4,7 @@
 
 - [Array](./array/)
 
-- String
+- [String](./string/readme.md)
 
 - Stack
 
