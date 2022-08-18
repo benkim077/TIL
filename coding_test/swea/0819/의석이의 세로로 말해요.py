@@ -1,6 +1,6 @@
 import sys
 
-sys.stdin = open('input.txt')
+sys.stdin = open('../0818/input.txt')
 
 
 def make_square_arr(lst, M, N):

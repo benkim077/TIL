@@ -1,7 +1,7 @@
 import sys
 
 
-sys.stdin = open('input.txt')
+sys.stdin = open('../0818/input.txt')
 
 
 def get_max_idx(arr):
