@@ -1,6 +1,4 @@
-# 완전 검색
-
-Exhaustive Search, Brute-force
+# 완전 탐색 Exhaustive Search, Brute-force
 
 - 모든 경우의 수를 나열해보고 확인하는 기법
 

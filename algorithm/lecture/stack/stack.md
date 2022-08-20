@@ -10,20 +10,17 @@
 
 ### 자료구조
 
-- 자료를 선형으로 저장할 저장소가 필요
+- list(배열) : 자료를 선형으로 저장할 저장소
 
-    - 배열(lst)
-
-    - top: 마지막으로 삽입된 원소의 위치(stack pointer; SP)
+- top: 마지막으로 삽입된 원소의 위치(stack pointer; SP)
 
 ### 연산
 
 - lst.append() 또는 lst.pop()
 
-> lst의 append, pop 메소드는 느리다. 
-> (배열이 계속 생성되는 방식이기 때문)
->
-> 그럴 땐, 필요한 길이 만큼 0으로 초기화된 stack을 만들고, top 변수를 sp로 활용한다.
+> lst의 append, pop 메소드는 느리다. (배열이 계속 생성되는 방식이기 때문)
+
+> 시간 단축이 필요한 경우 : 필요한 길이 만큼 0으로 초기화된 stack을 만들고, top 변수를 sp로 활용한다.
 
 #### push: 스택에 자료 삽입
 
@@ -31,11 +28,11 @@
 
 - push A
 
-    ```
-    top++
-    if top == size, overflow
-    else stk[top] = A
-    ```
+```
+top++
+if top == size, overflow
+else stk[top] = A
+```
 
 #### pop: 삭제. 삽입한 자료의 역순으로 꺼낸다.
 
@@ -43,11 +40,11 @@
 
 - pop
 
-    ```
-    top--
-    if top == -1, underflow
-    else return stk[top + 1]
-    ```
+```
+top--
+if top == -1, underflow
+else return stk[top + 1]
+```
 
 #### 기타 연산
 
@@ -69,8 +66,6 @@
 
     - 구현이 어렵지만 메모리를 효율적으로 사용한다.
 
-## 스택 활용 예시
+## 함수 호출과 스택
 
-### 괄호
-
-### 함수 호출
+- 함수가 호출되면 스택에 넣고, 중첩 함수가 호출되면 다시 스택에 넣는 방식.
