@@ -11,3 +11,7 @@
 - [DP](./dynamic_programming.md)
 
 - [DFS](./dfs.md)
+
+- [중위 표기식, 후위 표기식](./infix_and_postfix_notation.md)
+
+- [백트래킹](./backtracking.md)
