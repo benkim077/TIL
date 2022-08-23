@@ -1,6 +1,4 @@
-# 완전 검색
-
-Exhaustive Search, Brute-force
+# 완전 탐색 Exhaustive Search, Brute-force
 
 - 모든 경우의 수를 나열해보고 확인하는 기법
 
@@ -19,14 +17,6 @@ Exhaustive Search, Brute-force
 - 6장의 카드가 run, triplet으로만 구성된 경우를 baby-gin
 
 - 6자리 숫자를 입력 받아 baby-gin 여부를 판단하는 프로그램 작성
-
-## 입력 예
-
-- 667767 O
-
-- 054060 O
-
-- 101123 X
 
 ### 완전 검색을 활용한 Baby-gin 접근
 

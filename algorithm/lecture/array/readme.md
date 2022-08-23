@@ -2,11 +2,9 @@
 
 ## Section
 
-- [Algorithm](./algorithm.md)
-
 - [Array](./array.md)
 
-- [Sort](./sort.md)
+- [Bubble Sort, Counting Sort](./sort.md)
 
 - [Exhausted Search](./exhausted_search.md)
 
@@ -16,12 +14,8 @@
 
 - [Subset Sum](./subset_sum.md)
 
-- Search
+- [Search](./search.md)
 
-- index
+- [index](./index.md)
 
-- Selection Sort
-
-- Selection Algorithm
-
-### 연습문제
+- [Selection Sort & Selection Algorithm](./selection_sort.md)
