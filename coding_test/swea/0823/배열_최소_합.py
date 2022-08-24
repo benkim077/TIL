@@ -6,32 +6,34 @@ import sys
 sys.stdin = open('input.txt')
 
 
-def get_row_value(i, j):
-    global N, data, sm, sm_lst, vsted
-
-    if i >= 0:
-        sm += data[i][j]
-        print(i, j, data[i][j])
+def dfs(n, sm):
+    global ans, vsted
+    # 가지 치기
+    if ans <= sm:
+        return
 
     # 종료 조건
-    if i == N - 1:
-        sm_lst.append(sm)
+    if n >= N:
+        if ans > sm:
+            ans = sm
         return
 
     # 하부 함수 호출
-    for j in range(N):  # 0, 1, 2
-        get_row_value(i + 1, j)
+    for j in range(N):
+        if not vsted[j]:
+            vsted[j] = True
+            dfs(n + 1, sm + data[n][j])
+            vsted[j] = False
 
 
 T = int(input())
 for tc in range(1, T + 1):
     N = int(input())
     data = [list(map(int, input().split())) for _ in range(N)]
-    print(data)
 
-    sm = 0
-    sm_lst = []
-    vsted = [[0] * N for _ in range(N)]
-    get_row_value(-1, 0)
+    vsted = [False] * N
+    ans = 10 * N
 
-    print(sm_lst)
+    dfs(0, 0)
+
+    print(f'#{tc} {ans}')

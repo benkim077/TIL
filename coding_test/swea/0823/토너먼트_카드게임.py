@@ -10,8 +10,7 @@ sys.stdin = open('input.txt')
 lookup_table = [0, 2, 3, 1] # 가위바위보 결과를 미리
 
 
-# 현재 lst 입력받고, 2칸씩 이긴 사람 리스트를 리턴하는 함수
-def get_winner(s, e) -> list:
+def get_winner(s, e):
     # 종료 조건
     if s == e:
         return s
