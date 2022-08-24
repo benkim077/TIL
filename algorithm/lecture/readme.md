@@ -12,7 +12,7 @@
 
 - [Stack](./stack/readme.md)
 
-- Queue
+- [Queue](./queue/readme.md)
 
 - Tree
 
