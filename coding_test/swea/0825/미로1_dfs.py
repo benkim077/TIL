@@ -11,7 +11,7 @@ def dfs(graph, vi, vj, vsted):
 
     for di, dj in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
         i = vi + di
-        j = vi + di
+        j = vj + dj
         if 0 <= i < N and 0 <= j < N and graph[i][j] != 1 and not vsted[i][j]:
             dfs(graph, i, j, vsted)
 

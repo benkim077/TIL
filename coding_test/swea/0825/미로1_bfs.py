@@ -17,7 +17,7 @@ def bfs(graph, si, sj, vsted):
 
         for di, dj in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
             i, j = vi + di, vj + dj
-            if 0 <= i < N and 0 <= j < N and not vsted[i][j]:
+            if 0 <= i < N and 0 <= j < N and graph[i][j] != 1 and not vsted[i][j]:
                 q.append((i, j))
                 vsted[i][j] = True
 
