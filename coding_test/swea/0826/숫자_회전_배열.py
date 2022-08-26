@@ -3,7 +3,7 @@ N x N 행렬이 주어질 때,
 시계 방향으로 90도, 180도, 270도 회전한 모양을 출력하라.
 '''
 import sys
-sys.stdin = open('input.txt')
+sys.stdin = open('../0825/input.txt')
 
 
 # N*N 2차원 배열을 입력받아 오른쪽으로 90도 회전한 배열을 출력하는 함수
