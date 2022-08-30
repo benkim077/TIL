@@ -13,10 +13,42 @@
 
 ## 가상환경 생성
 
-`$ python -m venv venvName`
+`$ python -m venv venv`
 
 텅 빈 가상 환경을 만들 수 있다.
 
-## 가상환경 활성화/비활성화
+## 가상환경 명령어
+
+- `source ./venv/Scripts/activate` 가상환경 활성화 시키기
+
+- `pip list` 패키지 리스트 확인
+
+- `pip install django==3.2.13` 장고 설치하기
+
+- `pip freeze > requirements.txt` 설정 저장하기
+
+- `pip install -r requirements.txt` 설정 불러오기
+
+- `django-admin startproject firstpjt .` (현재 위치에) 새로운 프로젝트 만들기
+
+- `python manage.py runserver` 서버 실행하기
+
+- `ctrl c` 서버 닫기
+
+## 파일 설명
+
+- manage.py 장고 프로젝트에 대한 명령 수행
+
+- db.sqlite3 데이터베이스 파일
+
+- urls.py urls를 분기해서, 알맞은 view에 전달. (우편 배달부)
+
+- asgi.py, wsgi.py 동기, 비동기(나중에 다시)
+
+- settings.py 장고 프로젝트 전반에 대한 세팅
+
+> settings.py, urls.py 만 살펴보자
+
+
 
 ## 가상환경 예시

@@ -7,6 +7,8 @@
 
 - [css](https://github.com/benkim077/TIL/tree/master/css)
 
+- [Django](./django/)
+
 - [git](https://github.com/benkim077/TIL/tree/master/git)
 
 - [html](https://github.com/benkim077/TIL/tree/master/html)
