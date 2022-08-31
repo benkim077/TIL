@@ -1,0 +1,75 @@
+# Migrations
+
+- 지금까지 작성한 models.py는 DB Table Schema를 설계한 것
+
+> 이제 DB 설계도를 만들어보자.
+
+- Migrations : Django가 모델에 생긴 변화(필드 추가, 수정 등)를 실제 DB에 반영하는 방법
+
+## Migrations 관련 주요 명령어
+
+> 중요!
+
+### makemigrations
+
+- `python managa.py makemigrations`
+
+- migration 파일이 만들어짐. Django가 models.py에 작성한 스키마 정보를 기반으로 한 최종 설계도(DB)를 만들어 준 것
+
+- 마이그레이션 파일이 DB 설계도(blue-print)
+
+- 아직 DB에 반영된 것은 아님(테이블 안 생김)
+
+### migrate
+
+- makemigrations로 만든 설계도를 실제 데이터베이스에 반영
+
+    - db.sqlite3 파일에 반영
+
+- 모델의 변경사항과 데이터베이스를 동기화(모델과 DB의 상황을 동기화)
+
+- `python manage.py migrate`
+
+- 내부적으로 마이크레이션 파일이 apply됐다.
+
+    - 내가 만든 것을 제외한 수 많은 설계도는 무엇일까?
+
+    - 우리가 만든 앱은 하나지만, 사실 이미 settings.py에 등록된 다른 앱들이 많다. 이 앱들도 설계도가 있다. 함께 migrate 되는 것.
+
+    - 장고를 구동하기 위한 기본적인 내장 앱들이 존재. 이 앱들도 DB를 쓰고, DB에 테이블이 필요.
+    
+    - 그래서 처음 migrate 할 때는 함께 apply되서, 테이블이 만들어진다.
+
+## 기타 명령어
+
+### showmigrations
+
+-  `python manage.py showmigrations` 
+
+- 마이그레이션이 됐는지 확인하는 명령어
+
+### sqlmigrate
+
+- `python manage.py sqlmigrate app_name 0001`
+
+- 해당 migrations 파일이 SQL 문으로 어떻게 해석 될 지 미리 확인할 수 있다.
+
+## DB 파일 열어보기
+
+- DB 파일을 열어보면 테이블들이 많이 보인다!
+
+    - `appname_classname`으로 테이블 이름을 만든다.
+
+    - \> 를 누르면 스키마 정보를 볼 수 있다.
+
+## 반드시 기억해야 할 migration 3단계
+
+1. models.py에서 변경사항이 발생하면
+
+2. migration 생성(makemigrations)
+
+3. DB 반영(migrate)
+
+## 설계도는 누가, 어떻게 해석할까?
+
+- 파이썬 언어를 SQL로 바꿔주는 것이 ORM

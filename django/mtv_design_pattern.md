@@ -1,10 +1,10 @@
 # Django 디자인 패턴
 
-- 장고는 MVC 디자인 패턴을 기반으로한, MTV 패턴을 사용한다.
+- 장고는 MVC 디자인 패턴을 기반으로한, **MTV 패턴**을 사용한다.
 
 ## MVC 디자인 패턴
 
-- Model - View - Controller
+- **Model - View - Controller**
 
 - 하나의 프로그램을 세 가지 역할로 구분한 개발 방법론
 
@@ -22,11 +22,11 @@
 
 ## MTV 패턴
 
-- (Model ->) Model 데이터
+- (Model ->) **Model** 데이터
 
-- (View ->) Template 화면
+- (View ->) **Template** 화면
 
-- (Controller ->) View 연결
+- (Controller ->) **View** 연결
 
 ## MTV 구조 흐름
 
