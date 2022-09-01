@@ -44,6 +44,6 @@
 
 ### CRUD with view functions
 
-- [CRUD with view functions]
+- [CRUD with view functions](./crud_with_view_functions.md)
 
-- [Admin Site]
+- [Admin Site](./admin_site.md)
