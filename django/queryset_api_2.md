@@ -6,7 +6,7 @@
 
 > 3가지 방법
 
-> 2번 방법 사용. 데이터를 받은 후 검증Validation을 하고 세이브를 한다.
+> 2번 방법 사용. 데이터를 받은 후 검증Validation을 하고 save()를 한다.
 
 ### 방법 1
 
@@ -50,25 +50,31 @@
 
 ### all()
 
+- `Article.objects.all()`
+
 - QuerySet을 리턴
 
-- 전체 데이터를 조회
+- **전체 데이터를 조회**
 
 ### get()
 
-- 단일 데이터 조회
+- `article = Article.objects.get(title='두번째')`
 
-    - 찾을 수 없으면 DoesNotExist 예외
+- **단일 데이터 조회**
 
-    - 둘 이상이면 MultipleObjectsReturned 예외
+    - 찾을 수 없으면 `DoesNotExist` 예외
 
-- 즉, 유니크한 값에만 사용(PK). 
+    - 둘 이상이면 `MultipleObjectsReturned` 예외
 
-- 고유성을 보장하는 조회에서 사용해야 함
+- 즉, 유니크한 값에만 사용(PK).
+
+- **고유성을 보장하는 조회에서 사용**해야 함
 
 ### filter()
 
-- 지정된 조회 매개변수와 일치하는 객체를 포함하는 QuerySet을 반환
+- `Article.objects.filter(content='django!')`
+
+- 지정한 조건에 맞는 모든 데이터를 쿼리셋에 담아 리턴(지정된 조회 매개변수와 일치하는 객체를 포함하는 QuerySet을 반환)
 
 - 데이터가 없으면 빈 쿼리셋을 반환(에러가 안뜸)
 
@@ -100,10 +106,12 @@
 
 - `article = Article.objects.get(pk=1)` 삭제하고자 하는 article 인스턴스 객체를 조회 후 반환 값 저장
 
-- `article.delete()` delete() 인스턴스 메서드 호출
+- `article.delete()` 인스턴스가 삭제된다. (delete() 인스턴스 메서드 호출.)
 
 - 삭제된 id는 재사용하지 않음
 
 ## 참고(출력 바꾸는 방법)
 
 - `__str__`를 정의하여 각각의 object가 문자열을 리턴하도록 할 수 있다.
+
+- **객체를 문자열로** 바꾸고 싶으면 어떻게 할 지 설정하는 것

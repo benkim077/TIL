@@ -1,6 +1,6 @@
 # Query Set API
 
-> Query Set API의 개념에 대해서 파악해보자.
+> Query Set API를 사용해서 DB로 전달, QuerySet은 DB로부터 정보를 받는 것
 
 ## Database API
 
@@ -12,9 +12,9 @@
 
 - `Article.objects.all()`
 
-    - Article은 model class
+    - Article은 정의한 **model class**
 
-    - objects는 Manager
+    - **objects는 Manager**. '하인'에게 다 시키자.
 
     - all()이 **Queryset API**
 
@@ -36,7 +36,7 @@
 
 ### QuerySet
 
-- DB로 부터 받은 객체 목록(데이터 목록)
+- DB로 부터 데이터를 쿼리셋 형태로 가져온다.(데이터 객체 목록)
 
     - iterable data. 1개 이상의 데이터. 인덱스로 접근 가능.
 

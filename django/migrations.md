@@ -22,7 +22,7 @@
 
 ### migrate
 
-- makemigrations로 만든 설계도를 실제 데이터베이스에 반영
+- makemigrations로 만든 migration(설계도)를 실제 데이터베이스에 반영
 
     - db.sqlite3 파일에 반영
 

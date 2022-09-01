@@ -4,7 +4,7 @@
 
 - Django ORM (장고 내장 ORM)
 
-- SQL을 사용하지 않고 DB를 조작할 수 있게 만들어주는 매개체
+- SQL을 사용하지 않고 DB를 조작할 수 있게 만들어주는 매개체, 인터페이스
 
     - Python Object -> ORM -> SQL
 
