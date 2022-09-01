@@ -14,33 +14,29 @@
 
 - `python managa.py makemigrations`
 
-- migration 파일이 만들어짐. Django가 models.py에 작성한 스키마 정보를 기반으로 한 최종 설계도(DB)를 만들어 준 것
+- **migration 파일**이 만들어짐. Django가 models.py에 작성한 스키마 정보를 기반으로 한 최종 설계도(DB)를 만들어 준 것
 
 - 마이그레이션 파일이 DB 설계도(blue-print)
 
-- 아직 DB에 반영된 것은 아님(테이블 안 생김)
+- **아직 DB에 반영된 것은 아님**(테이블 안 생김)
 
 ### migrate
 
-- makemigrations로 만든 migration(설계도)를 실제 데이터베이스에 반영
-
-    - db.sqlite3 파일에 반영
-
-- 모델의 변경사항과 데이터베이스를 동기화(모델과 DB의 상황을 동기화)
+- makemigrations로 만든 설계도를 실제 DB(db.sqlite3 파일)에 반영(모델과 DB 동기화)
 
 - `python manage.py migrate`
 
-- 내부적으로 마이크레이션 파일이 apply됐다.
+- 내부적으로 마이그레이션 파일이 apply됐다.
 
-    - 내가 만든 것을 제외한 수 많은 설계도는 무엇일까?
+> 내가 만든 것을 제외한 수 많은 설계도는 무엇일까?
 
-    - 우리가 만든 앱은 하나지만, 사실 이미 settings.py에 등록된 다른 앱들이 많다. 이 앱들도 설계도가 있다. 함께 migrate 되는 것.
+- 우리가 직접 만든 앱은 하나지만, django를 구동하기 위한 기본적인 내장 앱들이 존재한다. (settings.py에서 확인할 수 있다.)
 
-    - 장고를 구동하기 위한 기본적인 내장 앱들이 존재. 이 앱들도 DB를 쓰고, DB에 테이블이 필요.
-    
-    - 그래서 처음 migrate 할 때는 함께 apply되서, 테이블이 만들어진다.
+- 이 앱들도 DB를 쓰고, DB에 테이블이 필요.
 
-## 기타 명령어
+- 그래서 처음 migrate 할 때, 이 내장 앱들의 설계도도 함께 apply 되서, 테이블이 만들어진다.
+
+## Migrations 기타 명령어
 
 ### showmigrations
 
@@ -58,11 +54,11 @@
 
 - DB 파일을 열어보면 테이블들이 많이 보인다!
 
-    - `appname_classname`으로 테이블 이름을 만든다.
+    - 테이블 이름은 `appname_classname`이다.
 
     - \> 를 누르면 스키마 정보를 볼 수 있다.
 
-## 반드시 기억해야 할 migration 3단계
+## (정리) 반드시 기억해야 할 migration 3단계
 
 1. models.py에서 변경사항이 발생하면
 
