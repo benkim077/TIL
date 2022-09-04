@@ -15,7 +15,6 @@
     - django 확장 프로그램 모음
 
     - shell_plus, graph model 등 다양한 확장 기능
-
 > 패키지 목록 업데이트 하기
 
 - `$ pip freeze > requirements.txt`

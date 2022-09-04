@@ -6,29 +6,25 @@
 
 > 서버로 데이터 보내기
 
-- HTML `<form>` element 의 핵심 속성
+- HTML `<form>` element 의 핵심 속성 2가지
 
     - `action` 입력 데이터를 **어디로** 보낼지
     
-    - `method` 데이터를 **어떤 방식으로** 보낼지
-
-        - GET, POST 방식
+    - `method` 데이터를 **어떤 방식으로** 보낼지(*HTTP request methods*)
 
 ### input element의 name 속성
 
-- form을 통해 submit했을 때, **name 속성은 서버에서 사용하는 값**이 된다.
+- form을 통해 submit했을 때, **name 속성은 서버에서 사용하는 이름**이 된다.
 
 - **name은 key, value는 value로 매핑**
 
 ## HTTP request methods
 
-- HTTP는 웹에서 데이터 교환의 규칙
+- HTTP는 웹 데이터 교환 규칙
 
 - HTTP는 주어진 리소스가 수행할 작업을 나타내는 **request methods**를 정의함.
 
-    - 주어진 자원에 수행하길 원하는 행동
-
-- GET, POST, PUT, DELETE
+- GET, POST, PUT, DELETE 방식
 
 ### GET 방식
 
@@ -38,11 +34,11 @@
 
 - **Query String**으로 데이터 전송
 
-    - URL에 데이터 포함시켜서 서버로 전송
-
-    - **&로 연결된 key=value 쌍**으로 구성
+    - URL에 데이터를 포함시켜서 서버로 전송
 
     - **기본 URL과 ?로 구분**
+
+    - **&로 연결된 key=value 쌍**으로 구성
 
 ## Retrieving the Data
 
@@ -50,9 +46,9 @@
 
 - key-value 쌍의 데이터들을 어떻게 사용할까?
 
-- 모든 요청 데이터는 `view` 함수의 첫 번째 인자 `request`에 들어있다.
+- **모든 요청 데이터는 `view` 함수의 첫 번째 인자 `request`에 들어있다.**
 
-- `views.py`에서 `message = request.GET.get('message')`로 가져온다.
+- `views.py > message = request.GET.get('message')`로 가져온다.
 
 - `context`에 `message`를 넣어 `templates`에 보낸다.
 
