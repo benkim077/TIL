@@ -47,3 +47,19 @@
 - [CRUD with view functions](./crud_with_view_functions.md)
 
 - [Admin Site](./admin_site.md)
+
+### Form & ModelForm
+
+- [Form](./django_form.md)
+
+- [ModelForm](./modelform.md)
+
+### Handling HTTP request
+
+- [Handling HTTP requests](./handling_http_request.md)
+
+- [View Decorators](./view_decorator.md)
+
+### Authentication
+
+- Authentication Intro
