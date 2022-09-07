@@ -62,4 +62,8 @@
 
 ### Authentication
 
-- Authentication Intro
+- [Django Authentication System](./auth.md)
+
+- [HTTP Cookies](./http_cookies.md)
+
+- [authentication with user](./authentication_with_user.md)
