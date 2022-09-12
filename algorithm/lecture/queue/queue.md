@@ -59,7 +59,7 @@ def enQ(item):
 ### deQueue() 삭제
 
 ```
-front--
+front++
 ```
 
 ```
