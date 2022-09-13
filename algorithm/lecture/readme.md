@@ -6,15 +6,15 @@
 
 - [Algorithm](./algorithm.md)
 
-- [Array](./array/readme.md)
+- [Array](./array/)
 
-- [String](./string/readme.md)
+- [String](./string/)
 
-- [Stack](./stack/readme.md)
+- [Stack](./stack/)
 
-- [Queue](./queue/readme.md)
+- [Queue](./queue/)
 
-- Tree
+- [Tree](./tree/)
 
 - Computational Thinking
 
