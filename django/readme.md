@@ -66,4 +66,8 @@
 
 - [HTTP Cookies](./http_cookies.md)
 
+- [Authentication in Web request] <<
+
 - [authentication with user](./authentication_with_user.md)
+
+- [Limiting Access to Logged-in Users]
