@@ -1,7 +1,14 @@
 import sys
 sys.stdin = open('input.txt')
 
+T = int(input())
+for tc in range(1, T + 1):
+    day_p, month_p, three_p, year_p = map(int, input().split())
+    data = [0] + list(map(int, input().split()))
 
+
+
+'''
 T = int(input())
 for tc in range(1, T + 1):
     day_p, month_p, three_p, year_p = map(int, input().split())
@@ -16,5 +23,4 @@ for tc in range(1, T + 1):
     ans = min(ans_lst[-1], year_p)
 
     print(f'#{tc} {ans}')
-    
-    
+'''
