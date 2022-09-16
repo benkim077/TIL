@@ -28,18 +28,13 @@ for tc in range(1, T + 1):
     for i in range(N):
         if i % 2 == 0:
             link_arr[data[i]][data[i + 1]] = True
-    
-    
+        
     vsted = [0] * 101
     mx_value = bfs(target)
 
-
-    # print(vsted)
     ans = 0
     for i in range(101):
         if vsted[i] == mx_value:
             ans = max(ans, i)
 
     print(f'#{tc} {ans}')
-
-    
