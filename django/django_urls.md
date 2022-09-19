@@ -8,9 +8,9 @@
 
 - django는 붙여주는 것이 디폴트
 
-    - 이를 **URL 정규화**라 함
+    - 이를 **URL 정규화**라 함 ✅
 
-    - 복수의 페이지에서 같은 컨텐츠가 존재하는 것을 방지
+    - 복수의 페이지에서 같은 컨텐츠가 존재하는 것을 방지 ✅
 
 ## Variable routing 작성
 
@@ -43,9 +43,9 @@ urlpatterns = [
 
 ### include()
 
-> **URL configuration**이란? URL path와 views function을 매핑해주는 모듈.
+> **URL configuration**이란? URL path와 views function을 매핑해주는 모듈. ✅
 
-- include()는 다른 URLconf(app1/urls.py)들을 참조할 수 있도록 돕는 함수
+- include()는 다른 URLconf(app1/urls.py)들을 참조할 수 있도록 돕는 함수 ✅
 
 - 남은 문자열 후속 처리를 include된 URLconf로 전달
 

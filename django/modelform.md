@@ -1,22 +1,22 @@
-# ModelForm
+# ModelForm ✅
 
 > Model Class, Form Class 중복된 부분이 많아..
 
-> 사용자 입력을 모델과 동일한 필드에 받을거라면, 모델을 기반으로 한 폼을 만들자!
+> 사용자 입력을 모델과 동일한 필드에 받을거라면, **모델을 기반으로 한 폼**을 만들자! ✅
 
-- ModelForm은 모델에 대한 정보를 미리 들고가는 Form이다. 
+- ModelForm은 모델에 대한 정보를 미리 들고가는 Form이다. ✅
 
 - ModelForm을 사용하면, Form Class를 일일이 재정의할 필요가 없어진다.
 
-- Model을 통해 Form Class를 만들 수 있는 helper class
+- **Model을 통해 Form Class를 만들 수 있는 helper class**
 
 - Form과 똑같은 방식으로 View 함수에서 사용한다.
 
 ## ModelForm 선언
 
-- forms 라이브러리에서 파생된 ModelForm 클래스를 상속받는 클래스 선언하고, 내부 클래스 Meta를 만든다.
+- forms 라이브러리에서 파생된 ModelForm 클래스를 상속받는 클래스 선언하고, **내부 클래스 Meta**를 만든다.✅
 
-    - model, fields 클래스 변수를 사용한다.
+    - **model, fields 클래스 변수**를 사용한다.✅
 
 ```python
 # articles/forms.py
@@ -41,9 +41,9 @@ class ArticleForm(forms.ModelForm):
 
 - 참조하는 모델에 정의된 필드 정보를 Form에 적용
 
-- field 속성에 `'__all__'`를 사용하여 모델의 모든 필드를 포함할 수 있음
+- field 속성에 `'__all__'`를 사용하여 모델의 모든 필드를 포함할 수 있음 ✅
 
-- exclude 속성을 사용하여 일부 필드를 제외할 수도 있다.
+- **exclude 속성**을 사용하여 일부 필드를 제외할 수도 있다. ✅
 
 ## ModelForm with view funtions
 
@@ -53,9 +53,9 @@ class ArticleForm(forms.ModelForm):
 
 - 완성된 Model을 기반으로 한 Form에서 받은 데이터이기 때문에, 알아서 모델의 컬럼과 매핑이 된다. request.POST로 한 번에 넘길 수 있다.
 
-### is_valid()
+### is_valid() ✅
 
-- 유효성 검사 실행, 데이터 유효 여부를 bool 타입으로 반환
+- **유효성 검사 실행**, 데이터 유효 여부를 bool 타입으로 반환 ✅
 
 - is_valid()의 반환값이 False인 경우 form 인스턴스의 errors 속성에 값이 작성(유효성 검증 실패 원인이 dict 타입으로 저장)
 
@@ -76,37 +76,37 @@ def create(request):
 
 ### save() 메서드
 
-- form 인스턴스에 바인딩 된('데이터가 들어간'이라는 뜻) 데이터를 통해 데이터베이스 객체를 만들고 저장
+- **form 인스턴스에 바인딩 된('데이터가 들어간'이라는 뜻) 데이터**를 통해 데이터베이스 객체를 만들고 저장 ✅
 
-- ModelForm의 하위 클래스(여기서는 ArticleForm)는 **키워드 인자 `instance` 여부**를 통해 생성할 지, 수정할 지를 결정
+- ModelForm의 하위 클래스(여기서는 ArticleForm)는 **키워드 인자 `instance` 여부**를 통해 생성할 지, 수정할 지를 결정 ✅
 
-    - instance가 제공되지 않은 경우, save()는 지정된 모델의 새 인스턴스를 만든다.(CREATE)
+    - instance가 제공되지 않은 경우, save()는 지정된 모델의 새 인스턴스를 만든다.(CREATE) ✅
     
-    - instance가 제공된 경우, save()는 해당 인스턴스를 수정(UPDATE)
+    - instance가 제공된 경우, save()는 해당 인스턴스를 수정(UPDATE) ✅
 
         - instance 값으로 수정 대상 객체를 지정
 
     - (참고) instance는 키워드 인자이므로, 반드시 `instance=` 형태로 사용한다. 맨 처음 ModelForm의 생성자 함수의 맨 처음 인자는 data이므로, `data=`를 생략할 수 있었다.
 
-## Form과 ModelForm
+## Form과 ModelForm ✅
 
 > 시험?
 
 - 둘은 각자 역할이 다르다.
 
-- 공통점 : 사용자의 요청을 받아서 처리하는 것
+- 공통점 : 사용자의 요청을 받아서 처리하는 것 ✅
 
-- Form
+- Form ✅
 
     - 사용자로부터 받는 데이터가 DB와 연관되어 있지 않은 경우
 
-    - DB에 영향을 미치지 않고 단순 데이터만 사용되는 경우
+    - DB에 영향을 미치지 않고 **단순 데이터만 사용**되는 경우
 
-- ModelForm
+- ModelForm ✅
 
-    - 사용자로부터 받는 데이터가 DB와 연관되어 있는 경우에 사용
+    - 사용자로부터 받는 데이터가 **DB와 연관**되어 있는 경우에 사용
 
-    - 데이터 유효성 검사가 끝나면 데이터를 각각 어떤 레코드에 매핑해야 할 지 이미 알고 있기 때문에 곧바로 save() 호출이 가능
+    - **데이터 유효성 검사가 끝나면** 데이터를 각각 어떤 레코드에 매핑해야 할 지 이미 알고 있기 때문에 **곧바로 save() 호출이 가능**
 
 ## 위젯 활용하기
 

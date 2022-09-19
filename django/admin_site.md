@@ -1,4 +1,4 @@
-# Admin Site
+# Admin Site ✅
 
 > django 관리자 페이지. automatic admin interface
 

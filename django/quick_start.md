@@ -14,7 +14,7 @@ cd .
 
 - `$ pip install -r requirements.txt` 설정 불러오기
 
-## 새 장고 프로젝트 시작하기
+## 새 장고 프로젝트 시작하기 ✅
 
 - `$ django-admin startproject pjt_name .` 현재 위치에 새 프로젝트 만들기
 
@@ -34,7 +34,7 @@ cd .
 
 - `settings.py` 장고 프로젝트 세팅
 
-## 장고 앱 Django Application
+## 장고 앱 Django Application ✅
 
 - 앱은 프로젝트의 기능
 

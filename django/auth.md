@@ -26,21 +26,21 @@
 
 - 사전 설정
 
-    - accounts라는 앱을 만들어서 회원, 인증 관련된 것을 처리.
+    - **accounts라는 앱**을 만들어서 회원, 인증 관련된 것을 처리.
 
     - 장고에 auth 관련 키워드를 accounts라는 이름으로 사용하는 경우가 많아서 도움이 된다.
 
-## 커스텀 유저 모델로 대체하는 이유
+## 커스텀 유저 모델로 대체하는 이유 ✅
 
 - 기본 User Model을 Custom User model로 대체해야 함.
 
 > '왜 기본 유저 모델을 안쓰고, 필수적으로 custom User model로 대체하나?'
 
-- 기본 빌트인 User model의 인증 요구사항이 적절하지 않을 수 있다.
+- 기본 빌트인 User model의 인증 요구사항이 적절하지 않을 수 있다. ✅
 
     - username 대신 email을 식별 값으로 쓰고 싶은 경우 등
 
-- 하지만, 프로젝트 도중에 기존 user model을 수정하는 것이 쉽지 않다.
+- 하지만, 프로젝트 도중에 기존 user model을 수정하는 것이 쉽지 않다. ✅
 
 - 대체하기
 
@@ -60,25 +60,32 @@
 
     - 첫 마이그레이션 전에 확정 지어야 하는 값
 
-### 커스텀 유저 모델로 대체하는 방법
+### 커스텀 유저 모델로 대체하는 방법 ✅
 
-> 3단계, 시험?
+> 3단계, 시험? ✅✅
 
 1. 커스텀 유저 모델 작성
 
 - AbstractUser을 상속받는 User 클래스를 만든다.
 
-- `from django.contrib.auth.models import AbstractUser`
+```python
+# accounts/models.py
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+    pass
+```
 
 2. django 프로젝트에서 User를 나타내는데 사용하는 모델을 생성한 커스텀 User 모델로 지정
 
 - `settings.py > AUTH_USER_MODEL = 'accounts.User'` 작성
 
-3. admin.py에 커스텀 User 모델 등록
+3. admin.py에 커스텀 User 모델 등록 ✅
 
 - 기본 User 모델이 아니기 때문에 등록하지 않으면 admin site에 출력되지 않음
 
 ```python
+# accounts/admin.py
 from django.contrib.auth.admin import UserAdmin
 from .models import User
 
@@ -123,10 +130,10 @@ admin.site.register(User, UserAdmin)
 
 - db의 테이블 이름이 auth_user > accounts_user로 바뀜!
 
-#### User 모델을 반드시 대체해야 할까?
+#### User 모델을 반드시 대체해야 할까? ✅
 
 - 기본 User 모델이 충분 하더라도 커스텀 User 모델을 설정하는 것을 강력하게 권장
 
-- 커스텀 유저 모델은 기본 유저 모델과 동일하게 작동하면서도 필요한 경우 나중에 맞춤 설정할 수 있기 때문
+- 커스텀 유저 모델은 기본 유저 모델과 동일하게 작동하면서도 필요한 경우 나중에 맞춤 설정할 수 있기 때문 ✅
 
-- User 모델 대체 작업은 프로젝트의 모든 migrations 혹은 첫 migrate를 실행하기 전에 마쳐야 함
+- User 모델 대체 작업은 프로젝트의 모든 migrations 혹은 첫 migrate를 실행하기 전에 마쳐야 함 ✅

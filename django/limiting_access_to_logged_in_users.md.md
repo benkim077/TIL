@@ -12,7 +12,7 @@
 
     2. The `login_required` decorator
 
-## 
+## is_authenticated
 
 - User model의 속성 중 하나
 
@@ -25,6 +25,8 @@
 - 일반적으로 request.user에서 이 속성을 사용 `request.user.is_authenticated`
 
 > (주의) 권한과는 관련이 없으며, 사용자가 활성화 상태이거나 유효한 세선을 가지고 있는지도 확인하지 않음. 로그인 or 비로그인만 확인하는 속성.
+
+## login_required
 
 ## 'next' query string
 

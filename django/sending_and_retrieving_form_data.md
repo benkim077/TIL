@@ -18,7 +18,7 @@
 
 - **name은 key, value는 value로 매핑**
 
-## HTTP request methods
+## HTTP request methods ✅
 
 - HTTP는 웹 데이터 교환 규칙
 
@@ -26,13 +26,13 @@
 
 - GET, POST, PUT, DELETE 방식
 
-### GET 방식
+### GET 방식 ✅
 
-- 서버로부터 정보를 조회하는 데 사용
+- 서버로부터 정보를 조회하는 데 사용 ✅
 
     - 리소스 요청, 데이터 가져올 때
 
-- **Query String**으로 데이터 전송
+- **Query String**으로 데이터 전송 ✅
 
     - URL에 데이터를 포함시켜서 서버로 전송
 
@@ -46,7 +46,7 @@
 
 - key-value 쌍의 데이터들을 어떻게 사용할까?
 
-- **모든 요청 데이터는 `view` 함수의 첫 번째 인자 `request`에 들어있다.**
+- **모든 요청 데이터는 `view` 함수의 첫 번째 인자 `request`에 들어있다.** ✅
 
 - `views.py > message = request.GET.get('message')`로 가져온다.
 

@@ -66,8 +66,11 @@
 
 - [HTTP Cookies](./http_cookies.md)
 
-- [Authentication in Web request] <<
+- [Authentication in Web request](./authentication_in_web_request.md)
 
 - [authentication with user](./authentication_with_user.md)
 
-- [Limiting Access to Logged-in Users]
+- [Limiting Access to Logged-in Users](./limiting_access_to_logged_in_users.md.md)
+
+
+- [정리](./test.md)

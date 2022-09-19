@@ -1,12 +1,12 @@
-# Django Form
+# Django Form ✅
 
-- 사용자의 **입력 데이터**의 **유효성 검증**이 반드시 필요하다.
+- 사용자의 **입력 데이터**의 **유효성 검증**이 반드시 필요하다. ✅
 
-- Form은 Django의 **유효성 검사 도구** 중 하나
+- Form은 Django의 **유효성 검사 도구** 중 하나 ✅
 
 - Django는 Form을 통해 간단하게, 자동으로 유효성 검사를 할 수 있는 기능을 제공한다.
 
-- Form이 처리해주는 세 부분
+- Form이 처리해주는 세 부분 ✅
 
     1. 렌더링을 위한 데이터 준비 및 재구성
 
@@ -29,7 +29,7 @@ class ArticleForm(forms.Form):
     content = forms.CharField()
 ```
 
-- forms 라이브러리의 Form 클래스를 상속받는다.
+- forms 라이브러리의 Form 클래스를 상속받는다. ✅
 
 - TextField는 존재하지 않는다.
 
@@ -65,7 +65,7 @@ def new(request):
 
 - label, input 쌍에 대한 3가지 출력 옵션
 
-1. `as_p()` 각 필드가 p태그로 감싸져서 렌더링
+1. `as_p()` 각 필드가 p태그로 감싸져서 렌더링 ✅
 
 2. `as_ul()` 각 필드가 li태그로 감싸져서 렌더링
 
@@ -75,13 +75,13 @@ def new(request):
 
 1. Form fields
 
-    - **입력에 대한 유효성 검사** 로직 처리
+    - **입력에 대한 유효성 검사** 로직 처리 ✅
 
     - 템플릿에서 직접 사용
 
 2. Widgets
 
-    - 웹페이지의 HTML input 요소 **렌더링**을 담당
+    - 웹페이지의 HTML input 요소 **렌더링**을 담당 ✅
 
     - Widgets은 반드시 form field에 할당
 

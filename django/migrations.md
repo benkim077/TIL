@@ -8,11 +8,11 @@
 
 ## Migrations 관련 주요 명령어
 
-> 중요! 명령어 이름 체크!
+> 중요! 명령어 이름 체크! ✅✅
 
 ### makemigrations
 
-- `python managa.py makemigrations`
+- `python managa.py makemigrations` ✅
 
 - **migration 파일**이 만들어짐. Django가 models.py에 작성한 스키마 정보를 기반으로 한 최종 설계도(DB)를 만들어 준 것
 
@@ -24,7 +24,7 @@
 
 - makemigrations로 만든 **설계도를 실제 DB**(db.sqlite3 파일)에 **반영**(모델과 DB 동기화)
 
-- `python manage.py migrate`
+- `python manage.py migrate` ✅
 
 - 내부적으로 마이그레이션 파일이 apply됐다.
 

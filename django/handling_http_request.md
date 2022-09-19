@@ -1,8 +1,8 @@
-# Handling HTTP requests
+# Handling HTTP requests ✅
 
 > HTTP requests 처리에 따른 view 함수 구조 변화
 
-- new-create, edit-update의 공통점과 차이점
+- new-create, edit-update의 공통점과 차이점 ✅
 
     - 공통점 : 공동의 목적(CREATE생성, UPDATE수정)
     
@@ -12,9 +12,9 @@
     
         - create, update는 POST 메서드만 처리. DB에 조작을 가함(생성/수정)
 
-- 공통점과 차이점을 기반으로 하나의 view 함수에서 HTTP method에 따라 분기처리함(GET, POST)
+- 공통점과 차이점을 기반으로 하나의 view 함수에서 HTTP method에 따라 분기처리함(GET, POST) ✅
 
-## CREATE, UPDATE, DELETE 수정
+## CREATE, UPDATE, DELETE 수정 ✅
 
 > create에 new를 넣자.
 
