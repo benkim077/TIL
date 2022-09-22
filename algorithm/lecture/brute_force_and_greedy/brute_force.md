@@ -48,7 +48,7 @@ def f(i, k):
                 user[j] = False # a[j]를 다른 자리에서 쓸 수 있도록 해제
 
 N = 3
-a = [i for i in range(1, N)]
+a = [i for i in range(1, N + 1)]
 p = [0] * N
 user = [False] * N
 f(0, N)
@@ -77,7 +77,7 @@ def f(i, k, r):
 
 N = 5
 R = 3
-a = [i for i in range(1, N)]
+a = [i for i in range(1, N + 1)]
 p = [0] * R
 user = [False] * N
 f(0, N, R)
