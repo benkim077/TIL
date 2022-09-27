@@ -1,7 +1,12 @@
 # 분할 정복
 
+- 분할(Divide) : 해결할 문제를 여러 개의 작은 부분으로 나눈다.
 
+- 정복(Conquer) : 나눈 작은 문제를 각각 해결한다.
 
+- 통합(Combine) : (필요하다면) 해결된 해답을 모은다.
+
+> Top-down Approach
 
 ## 병합 정렬
 
@@ -20,7 +25,15 @@
 - 전체 자료 집합에 대하여, 최소 크기의 부분집합이 될 때까지 분할 작업을 계속한다.
 
 ```python
+def merge_sort(lst):
+    if len(lst) == 1:
+        return lst
 
+    m = len(lst) // 2
+    left = merge_sort(lst[:m])
+    right = merge_sort(lst[m:])
+
+    return merge(left, right)
 ```
 
 ### 병합 단계
@@ -30,7 +43,21 @@
 - 하나로 병합될 때까지 반복
 
 ```python
+def merge(left, right):
+    lst = []
 
+    while len(left) > 0 or len(right) > 0:
+        if len(left) > 0 and len(right) > 0:
+            if left[0] <= right[0]:
+                lst.append(left.pop(0))
+            else:
+                lst.append(right.pop(0))
+        elif len(left) > 0:
+            lst.append(left.pop(0))
+        elif len(right) > 0:
+            lst.append(right.pop(0))
+
+    return lst
 ```
 
 ## 퀵 정렬
@@ -97,37 +124,24 @@ print(A)
 ```python
 def qsort(lst, s, e):
     if s >= e:
-        return
-
+        return lst
+    
     key = s
-    i = s + 1
-    j = e
+    i, j = s + 1, e
 
     while i <= j:
-        while i <= e and data[i] <= data[key]:
+        while i <= e and lst[i] <= lst[key]:
             i += 1
-        while j > s and data[j] >= data[key]:
+        while j > s and lst[j] >= lst[key]:
             j -= 1
         if i > j:
-            data[j], data[key] = data[key], data[j]
+            lst[j], lst[key] = lst[key], lst[j]
         else:
-            data[i], data[j] = data[j], data[i]
-
+            lst[i], lst[j] = lst[j], lst[i]
+    
     qsort(lst, s, j - 1)
     qsort(lst, j + 1, e)
-
-
-T = int(input())
-for tc in range(1, T + 1):
-    N = int(input())
-    data = list(map(int, input().split()))
-
-    qsort(data, 0, N - 1)
-    # print(data)
-    print(f'#{tc} {data[N//2]}')
 ```
-
-
 
 ## 이진 검색
 
@@ -151,7 +165,6 @@ for tc in range(1, T + 1):
 
 ```python
 def bin_search(target, lst, s, e):     # target, lst, start, end
-    global cnt, ans
     while s <= e:
         m = (s + e) // 2
         if lst[m] == target:    # 찾았다!
@@ -165,7 +178,21 @@ def bin_search(target, lst, s, e):     # target, lst, start, end
 
 ### 재귀 구조로 구현
 
+```python
+def bin_search(lst, s, e, key):
+    if s > e:
+        return -1
+    else:
+        m = (s + e) // 2
+        if key == lst[m]:
+            return m
+        elif key < lst[m]:
+            return bin_search(lst, s, m - 1, key)
+        else:
+            return bin_search(lst, m + 1, e, key)
+```
 
+- 반복구조로 쉽게 짤 수 있으므로, 굳이 재귀를 사용할 필요는 없다.
 
 ## 분할 정복의 활용
 

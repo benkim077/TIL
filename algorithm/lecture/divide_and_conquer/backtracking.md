@@ -50,3 +50,98 @@
 
 - bt => 27 노드
 
+### n-queens 문제 코드 
+
+#### 1 반복을 최소화하기 위한 코드
+
+```python
+def bt(k):
+    global ans
+
+    if k == N:
+        ans += 1
+        return
+
+    for j in range(N):
+        if check(k, j):
+            board[k][j] = 1
+            bt(k + 1)
+            board[k][j] = 0
+
+
+def check(si, sj):
+    # 위쪽 체크
+    for i in range(si):
+        if board[i][sj]:
+            return 0
+
+    # 좌상 대각선 체크
+    i, j = si - 1, sj - 1
+    while i >= 0 and j >= 0:
+        if board[i][j]:
+            return 0
+        i, j = i - 1, j - 1
+
+    # 우상 대각선 체크
+    i, j = si - 1, sj + 1
+    while i >= 0 and j < N:
+        if board[i][j]:
+            return 0
+        i, j = i - 1, j + 1
+
+    # 다 통과됐으면 1 리턴
+    return 1
+
+
+T = int(input())
+for tc in range(1, T + 1):
+    N = int(input())
+
+    ans = 0
+    board = [[0] * N for _ in range(N)]
+    bt(0)
+    print(f'#{tc} {ans}')
+```
+
+#### 2 di, dj를 이용한 코드
+
+- di, dj를 이용해서 코드를 줄일 수 있지만, 시간은 오히려 늘어난다.
+
+#### 3 lookup table을 이용한 풀이
+
+```python
+def dfs_tbl(n):
+    global ans
+    if n == N:
+        ans += 1
+        return
+
+    for j in range(N):
+        if j not in v1 and (n + j) not in v2 and (n - j) not in v3:
+            v1.append(j), v2.append(n + j), v3.append(n - j)
+            dfs_tbl(n + 1)
+            v1.pop(), v2.pop(), v3.pop()
+
+# v1, v2, v3 = [], [], []
+# dfs_tbl(0)
+```
+
+- 오른쪽 대각선
+
+    - 더하면 같은 값을 갖는 대각선
+
+    - i + j를 vsted2에 저장
+
+- 왼쪽 대각선
+
+    - i - j가 같은 대각선을 나타낸다.
+
+    - 파이썬에선 그냥 i - j 써도 된다.(? 다른 언어에서도 될 것 같은데.)
+
+    - v3에 저장
+
+- 위아래 선
+
+    - j가 위아래 선을 타나낸다.
+
+    - v1에 저장

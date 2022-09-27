@@ -3,11 +3,11 @@ def merge_sort(lst):
         return lst
 
     mid_idx = len(lst) // 2
-    left_lst = lst[:mid_idx]
-    right_lst = lst[mid_idx:]
+    # left_lst = lst[:mid_idx]
+    # right_lst = lst[mid_idx:]
 
-    left_lst = merge_sort(left_lst)
-    right_lst = merge_sort(right_lst)
+    left_lst = merge_sort(lst[:mid_idx])
+    right_lst = merge_sort(lst[mid_idx:])
 
     return merge(left_lst, right_lst)
 
@@ -18,13 +18,13 @@ def merge(left_lst, right_lst):
     while len(left_lst) > 0 or len(right_lst) > 0:
         if len(left_lst) > 0 and len(right_lst) > 0:
             if left_lst[0] <= right_lst[0]:
-                rlt.append(left_lst.pop())
+                rlt.append(left_lst.pop(0))
             else:
-                rlt.append(right_lst.pop())
+                rlt.append(right_lst.pop(0))
         elif len(left_lst) > 0:
-            rlt.append(left_lst.pop())
+            rlt.append(left_lst.pop(0))
         elif len(right_lst) > 0:
-            rlt.append(right_lst.pop())
+            rlt.append(right_lst.pop(0))
 
     return rlt
 
