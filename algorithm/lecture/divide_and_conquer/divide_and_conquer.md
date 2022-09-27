@@ -19,6 +19,10 @@
 
 - 전체 자료 집합에 대하여, 최소 크기의 부분집합이 될 때까지 분할 작업을 계속한다.
 
+```python
+
+```
+
 ### 병합 단계
 
 - 2개의 부분집합을 정렬하면서 하나의 집합으로 병합
@@ -88,6 +92,42 @@ print(A)
 
 
 
+#### 퀵 정렬 코드
+
+```python
+def qsort(lst, s, e):
+    if s >= e:
+        return
+
+    key = s
+    i = s + 1
+    j = e
+
+    while i <= j:
+        while i <= e and data[i] <= data[key]:
+            i += 1
+        while j > s and data[j] >= data[key]:
+            j -= 1
+        if i > j:
+            data[j], data[key] = data[key], data[j]
+        else:
+            data[i], data[j] = data[j], data[i]
+
+    qsort(lst, s, j - 1)
+    qsort(lst, j + 1, e)
+
+
+T = int(input())
+for tc in range(1, T + 1):
+    N = int(input())
+    data = list(map(int, input().split()))
+
+    qsort(data, 0, N - 1)
+    # print(data)
+    print(f'#{tc} {data[N//2]}')
+```
+
+
 
 ## 이진 검색
 
@@ -95,7 +135,7 @@ print(A)
 
     - 목적 키를 찾을 때까지 이진 검색을 순환적으로 반복 수행함으로써 검색 범위를 반으로 줄여가면서 보다 빠르게 검색을 수행
 
-- 이진 검색을 하기 위해서는 자료가 정렬된 상태여야 한다.
+- **이진 검색을 하기 위해서는 자료가 정렬된 상태**여야 한다.
 
 ### 검색 과정
 
@@ -108,6 +148,20 @@ print(A)
 4. 찾고자 하는 값을 찾을 때까지 1~3을 반복
 
 ### 반복 구조로 구현
+
+```python
+def bin_search(target, lst, s, e):     # target, lst, start, end
+    global cnt, ans
+    while s <= e:
+        m = (s + e) // 2
+        if lst[m] == target:    # 찾았다!
+            return 1
+        elif lst[m] < target:   # 오른쪽에 있는 경우
+            s = m + 1
+        else:                   # 왼쪽에 있는 경우
+            e = m - 1
+    return 0                # 못 찾은 경우
+```
 
 ### 재귀 구조로 구현
 
