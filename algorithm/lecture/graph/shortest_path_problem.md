@@ -44,3 +44,30 @@ Dijkstra(s, A, D)
             D[v] = min(D[v], D[w] + A[w][v])    # 기존 비용과 w를 거쳐가는 비용을 비교하고, 새로운 비용으로 갱신
 ```
 
+```python
+def dijkstra(start):
+    distance[start] = 0
+    vsted[start] = 1
+    for j in graph[start]:
+        distance[j[0]] = j[1]
+
+    for i in range(N - 1):
+        now = get_smallest_node()
+        vsted[now] = 1
+
+        for j in graph[now]:
+            cost = distance[now] + j[1]
+
+            if cost < distance[j[0]]:
+                distance[j[0]] = cost
+
+
+def get_smallest_node():
+    min_v = INF
+    min_i = 0
+    for i in range(1, N + 1):
+        if distance[i] < min_v and not vsted[i]:
+            min_v = distance[i]
+            min_i = i
+    return min_i
+```
