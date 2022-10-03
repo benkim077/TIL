@@ -16,14 +16,10 @@
 
 - [Tree](./tree/)
 
-- Computational Thinking
+- [Brute-Force Search and Greedy](./brute_force_and_greedy/)
 
-- Brute-Force Search
+- [Divide and Conquer](./divide_and_conquer.md)
 
-- Greedy
+- [Back Tracking](./backtracking.md)
 
-- Divide and Conquer
-
-- Back Tracking
-
-- Graph
+- [Graph](./graph/)
