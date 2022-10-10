@@ -4,12 +4,13 @@ def solve():
     global N
 
     ans = 0
+    # N개의 기타줄을 살 때까지 반복
     while N > 0:
-        if N >= 6:
-            ans += min(pkg_cost, a_cost * 6)
+        if N >= 6:  # 6개 이상 남았으면,
+            ans += min(pkg_cost, a_cost * 6)    # 패키지랑 낱개*6 비교
             N -= 6
-        else:
-            ans += min(pkg_cost, a_cost * N)
+        else:       # 6개 미만 남았으면,
+            ans += min(pkg_cost, a_cost * N)    # 패키지랑 낱개*N 비교
             N -= N
 
     return ans
@@ -20,8 +21,8 @@ pkg_cost, a_cost = [0] * M, [0] * M
 for i in range(M):
     pkg_cost[i], a_cost[i] = map(int, input().split())
 
-pkg_cost = min(pkg_cost)
-a_cost = min(a_cost)
+pkg_cost = min(pkg_cost)    # 패키지 중 가장 싼 가격
+a_cost = min(a_cost)        # 낱개 중 가장 싼 가격
 
 print(solve())
 
