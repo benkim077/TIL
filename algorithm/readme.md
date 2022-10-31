@@ -1,5 +1,0 @@
-# Algorithm
-
-- Book
-
-- Lecture
